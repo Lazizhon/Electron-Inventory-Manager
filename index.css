@@ -15,7 +15,7 @@ html, body {
 }
 
 .nav {
-    margin: 0 0 30px 0;
+    margin: 0 10px 30px 0;
     height: 50px;
     width: 1340px;
 }
@@ -29,10 +29,11 @@ input[type=text] {
     border-radius: 4px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+    font-family: 'Carrois Gothic', sans-serif;
 }
 
 input[type=text]:focus {
-    width:175px;
+    width:200px;
 }
 
 .sidebar {
@@ -44,12 +45,21 @@ input[type=text]:focus {
     width: 200px;
     float: left;
     border-width: 1px;
-    font-family: 'Archivo Black', sans-serif;
     font-size: 14px;
+}
+
+.guide {
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.underline {
+    margin: -3px 0 3px 0;
 }
 
 .sidebar ul {
     list-style-type: none;
+    font-family: 'Carrois Gothic', sans-serif;
 }
 
 .mainWin {
@@ -58,7 +68,7 @@ input[type=text]:focus {
     display: inline-block;
     height: 100%;
     width: 1133px;
-    margin: 20px 0 0 0;
+    margin: 50px 0 0 0;
     float: left;
 }
 
@@ -77,5 +87,4 @@ input[type=text]:focus {
 }
 
 .cat {
-    font-family: 'Raleway', sans-serif;
 }
