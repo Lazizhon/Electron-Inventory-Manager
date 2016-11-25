@@ -11,4 +11,21 @@ document.getElementById("close-btn").addEventListener("click", function(e) {
 var jobj = require('./test.json'); //(with path)
 
 var cat = document.getElementById('cat');
-cat.innerHTML += jobj.name;
+//cat.innerHTML += jobj.name;
+/*var li = document.createElement('li');
+li.appendChild(document.createTextNode(jobj.tags[0]));
+cat.appendChild(li);*/
+
+var keys = Object.keys(jobj),
+i = 0,
+len = keys.length,
+prop,
+value;
+while (i < len){
+    prop = keys[i];
+    value = jobj[prop];
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(value));
+    cat.appendChild(li);
+    ++i;
+}

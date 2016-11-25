@@ -44,6 +44,8 @@ input[type=text]:focus {
     width: 200px;
     float: left;
     border-width: 1px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 14px;
 }
 
 .sidebar ul {
@@ -72,4 +74,8 @@ input[type=text]:focus {
   -webkit-border-radius: 0 !important;
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
+}
+
+.cat {
+    font-family: 'Raleway', sans-serif;
 }
