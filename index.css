@@ -69,6 +69,21 @@ input[type=text]:focus {
     overflow: scroll;
 }
 
+.invBlock {
+  display: block;
+  border-width: thin;
+  border-color: #111111;
+  border-style: inset;
+  width: 1075px;
+  height: 25px;
+  border-radius: 25px;
+  margin: 0 5px 5px 25px;
+}
+
+.invBlock:hover{
+  background-color: #5555ff;
+}
+
 .col {
   margin: 0 25px 0 45px;
   display: inline-block;
