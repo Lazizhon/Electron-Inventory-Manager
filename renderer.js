@@ -16,7 +16,7 @@ var cat = document.getElementById('cat');
 li.appendChild(document.createTextNode(jobj.tags[0]));
 cat.appendChild(li);*/
 
-var keys = Object.keys(jobj),
+/*var keys = Object.keys(jobj),
 i = 0,
 len = keys.length,
 prop,
@@ -25,7 +25,18 @@ while (i < len){
     prop = keys[i];
     value = jobj[prop];
     var li = document.createElement('li');
-    li.appendChild(document.createTextNode(value));
+    li.appendChild(document.createTextNode(prop["title"]));
     cat.appendChild(li);
     ++i;
+}*/
+
+var list = jobj.Guide;
+for (var i = 0; i < list.length; i++) {    
+    var listCat = list[i];
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(listCat.title));
+    cat.appendChild(li);
+    for (var k = 0; k < listCat.length; i++) {
+        console.log(listCat.category[0].name);
+    }
 }
