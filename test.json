@@ -1,4 +1,8 @@
 {
-    "category": "CLEARANCE CORNER",
-    "category2": "SHOWROOM"
+    "Clearance Corner":[{
+      "BugShields":[{
+        "StockID":"92834",
+        "Brand":"AVS"
+        }]
+      }]
 }

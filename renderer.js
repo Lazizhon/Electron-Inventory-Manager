@@ -25,7 +25,7 @@ while (i < len){
     prop = keys[i];
     value = jobj[prop];
     var li = document.createElement('li');
-    li.appendChild(document.createTextNode(value));
+    li.appendChild(document.createTextNode(prop));
     cat.appendChild(li);
     ++i;
 }
