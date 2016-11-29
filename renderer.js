@@ -8,7 +8,7 @@ document.getElementById("close-btn").addEventListener("click", function(e) {
     window.close();
 });
 
-var jobj = require('./test.json'); //(with path)
+var jobj = require('./inventory.json'); //(with path)
 
 var cat = document.getElementById('cat');
 //cat.innerHTML += jobj.name;
