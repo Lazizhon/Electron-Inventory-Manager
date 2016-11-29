@@ -8,24 +8,16 @@ document.getElementById("close-btn").addEventListener("click", function(e) {
     window.close();
 });
 
-var jobj = require('./test.json'); //(with path)
+var jobj = require('./inventory.json'); //(with path)
 
 var cat = document.getElementById('cat');
-//cat.innerHTML += jobj.name;
-/*var li = document.createElement('li');
-li.appendChild(document.createTextNode(jobj.tags[0]));
-cat.appendChild(li);*/
-
-var keys = Object.keys(jobj),
-i = 0,
-len = keys.length,
-prop,
-value;
-while (i < len){
-    prop = keys[i];
-    value = jobj[prop];
+var list = jobj.Guide;
+for (var i = 0; i < list.length; i++) {
+    var listCat = list[i];
     var li = document.createElement('li');
-    li.appendChild(document.createTextNode(prop));
+    li.appendChild(document.createTextNode(listCat.title));
     cat.appendChild(li);
-    ++i;
+    for (var k = 0; k < listCat.length; i++) {
+        console.log(listCat.category[0].name);
+    }
 }

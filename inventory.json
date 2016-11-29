@@ -1,0 +1,31 @@
+{
+    "Guide": [
+        {
+            "title": "Clearance Corner",
+            "category": [
+                {
+                    "name": "bugshields",
+                    "products": [
+                        {
+                            "stockID": "34525"
+                        }
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "title": "Showroom Wheels and Tires",
+            "category": [
+                {
+                    "name": "wheels",
+                    "products": [
+                        {
+                            "stockID": "45687"
+                        }
+                    ]
+                }
+            ]
+        }       
+        ]
+}
