@@ -34,7 +34,6 @@ function populateSide() {
 
 function fillProduct() {
     var list = jobj.Guide;
-    var ib   = document.getElementById('invBlock');
     var mainW = document.getElementById('mainWin');
     for (var i = 0; i < list.length; i++) {
         var listCat = list[i].category;
@@ -43,9 +42,8 @@ function fillProduct() {
             for (var j = 0; j < listProd.length; j++) {
                 var prodRow = document.createElement('div');
                 prodRow.id = "invBlock";
-                prodRow.appendChild(document.createTextNode("HI"));
+                //prodRow.appendChild(document.createTextNode("HI"));
                 mainW.appendChild(prodRow);
-                console.log("HELLO");
             }
         }
     }
