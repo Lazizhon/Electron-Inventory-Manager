@@ -10,11 +10,14 @@ document.getElementById("close-btn").addEventListener("click", function(e) {
 
 var jobj = require('./inventory.json'); //(with path)
 
-var cat = document.getElementById('cat');
-var innerCat = document.getElementById('innerCat');
+var cat  = document.getElementById('cat');
+var ib   = document.getElementById('invBlock');
+var main = document.getElementById('mainWin');
 var list = jobj.Guide;
 
 populateSide();
+
+fillProduct();
 
 function populateSide() {
   for (var i = 0; i < list.length; i++) {
@@ -31,4 +34,16 @@ function populateSide() {
     li.appendChild(ul);
     cat.appendChild(li);
   }
+}
+
+function fillProduct() {
+    for (var i = 0; i < list.length; i++) {
+        var listCat = list[i].category;
+        for (var k = 0; k < listCat.length; k++) {
+            var listProd = listCat[k].products;
+            for (var j = 0; j < listProd.length; j++) {
+                
+            }
+        }
+    }
 }

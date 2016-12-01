@@ -72,11 +72,11 @@ input[type=text]:focus {
 .invBlock {
   display: block;
   border-width: thin;
-  border-color: #111111;
+  border-color: #aaaaaa;
   border-style: inset;
   width: 1075px;
   height: 25px;
-  border-radius: 25px;
+  border-radius: 2px;
   margin: 0 5px 5px 25px;
 }
 
