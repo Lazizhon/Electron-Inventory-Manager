@@ -10,20 +10,25 @@ document.getElementById("close-btn").addEventListener("click", function(e) {
 
 var jobj = require('./inventory.json'); //(with path)
 
+var cat = document.getElementById('cat');
+var innerCat = document.getElementById('innerCat');
+var list = jobj.Guide;
+
 populateSide();
 
 function populateSide() {
-    var cat = document.getElementById('cat');
-
-    var list = jobj.Guide;
-    for (var i = 0; i < list.length; i++) {    
-        var listGuide = list[i];
-        var li = document.createElement('li');
-        li.appendChild(document.createTextNode(listGuide.title));
-        cat.appendChild(li);
-        for (var j = 0; j < listGuide.length; j++) {    
-
-            console.log(listGuide.category[0].name);
-        }
+  for (var i = 0; i < list.length; i++) {
+    var listGuide = list[i];
+    var listCat = listGuide.category;
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(listGuide.title));
+    var ul = document.createElement('ul');
+    for (var k = 0; k < listCat.length; k++) {
+      var liIn = document.createElement('li');
+      liIn.appendChild(document.createTextNode(listCat[k].name));
+      ul.appendChild(liIn);
     }
+    li.appendChild(ul);
+    cat.appendChild(li);
+  }
 }

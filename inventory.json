@@ -4,16 +4,24 @@
             "title": "Clearance Corner",
             "category": [
                 {
-                    "name": "bugshields",
+                    "name": "Bugshields",
                     "products": [
                         {
                             "stockID": "34525"
                         }
                     ]
+                },
+                {
+                    "name": "Grille Guards",
+                    "products": [
+                        {
+                            "stockID": "21389"
+                        }
+                    ]
                 }
             ]
         },
-        
+
         {
             "title": "Showroom Wheels and Tires",
             "category": [
@@ -26,6 +34,6 @@
                     ]
                 }
             ]
-        }       
+        }
         ]
 }
