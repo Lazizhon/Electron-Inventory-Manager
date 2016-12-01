@@ -10,33 +10,20 @@ document.getElementById("close-btn").addEventListener("click", function(e) {
 
 var jobj = require('./inventory.json'); //(with path)
 
-var cat = document.getElementById('cat');
-//cat.innerHTML += jobj.name;
-/*var li = document.createElement('li');
-li.appendChild(document.createTextNode(jobj.tags[0]));
-cat.appendChild(li);*/
+populateSide();
 
-/*var keys = Object.keys(jobj),
-i = 0,
-len = keys.length,
-prop,
-value;
-while (i < len){
-    prop = keys[i];
-    value = jobj[prop];
-    var li = document.createElement('li');
-    li.appendChild(document.createTextNode(prop["title"]));
-    cat.appendChild(li);
-    ++i;
-}*/
+function populateSide() {
+    var cat = document.getElementById('cat');
 
-var list = jobj.Guide;
-for (var i = 0; i < list.length; i++) {    
-    var listCat = list[i];
-    var li = document.createElement('li');
-    li.appendChild(document.createTextNode(listCat.title));
-    cat.appendChild(li);
-    for (var k = 0; k < listCat.length; i++) {
-        console.log(listCat.category[0].name);
+    var list = jobj.Guide;
+    for (var i = 0; i < list.length; i++) {    
+        var listGuide = list[i];
+        var li = document.createElement('li');
+        li.appendChild(document.createTextNode(listGuide.title));
+        cat.appendChild(li);
+        for (var j = 0; j < listGuide.length; j++) {    
+
+            console.log(listGuide.category[0].name);
+        }
     }
 }
