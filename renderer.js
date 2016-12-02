@@ -50,7 +50,8 @@ function fillProduct(eID) {
         for (var k = 0; k < listCat.length; k++) {
             if (listCat[k].name === eID && listCat[k].name !== currCat) {
               var listProd = listCat[k].products;
-              removeElems("invBlock");
+              removeElems("invBlockdr");
+              removeElems("invBlocklt");
               for (var j = 0; j < listProd.length; j++) {
                 var prodRow = document.createElement('div');
                 var stock   = document.createElement('div');
@@ -60,7 +61,15 @@ function fillProduct(eID) {
                 var del     = document.createElement('button');
                 edit.className = "editBtn";
                 del.className  = "delBtn";
-                prodRow.className = "invBlock";
+                stock.contentEditable = true;
+                desc.contentEditable  = true;
+                price.contentEditable = true;
+                if (j % 2 == 0) {
+                  prodRow.className = "invBlocklt";
+                }
+                else {
+                  prodRow.className = "invBlockdr"
+                }
                 stock.className   = "stckBlck";
                 desc.className    = "descBlck";
                 price.className   = "price";
@@ -83,7 +92,12 @@ function fillProduct(eID) {
     if (numLines < MAXLINES) {
       for (var i = numLines; i < MAXLINES; i++) {
         var prodRow = document.createElement('div');
-        prodRow.className = "invBlock";
+        if (i % 2 == 0) {
+          prodRow.className = "invBlocklt";
+        }
+        else {
+          prodRow.className = "invBlockdr";
+        }
         mainW.appendChild(prodRow);
       }
     }
