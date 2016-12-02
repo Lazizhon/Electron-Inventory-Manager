@@ -41,7 +41,8 @@ function populateSide() {
 };
 
 function fillProduct(eID) {
-    const lines = 50;
+    const MAXLINES = 50;
+    var   numLines = 0;
     var list = jobj.Guide;
     var mainW = document.getElementById('mainWin');
     for (var i = 0; i < list.length; i++) {
@@ -52,18 +53,12 @@ function fillProduct(eID) {
               removeElems("invBlock");
               for (var j = 0; j < listProd.length; j++) {
                 var prodRow = document.createElement('div');
-<<<<<<< HEAD
-                prodRow.id = "invBlock";
-                //prodRow.appendChild(document.createTextNode("HI"));
-                mainW.appendChild(prodRow);
-            }
-=======
                 var stock   = document.createElement('div');
                 var desc    = document.createElement('div');
                 var price   = document.createElement('div');
                 prodRow.className = "invBlock";
-                stock.className   = "catBlck";
-                desc.className    = "catBlck";
+                stock.className   = "stckBlck";
+                desc.className    = "descBlck";
                 price.className   = "price";
                 stock.innerHTML = listProd[j].stockID;
                 desc.innerHTML  = listProd[j].title;
@@ -72,13 +67,20 @@ function fillProduct(eID) {
                 prodRow.appendChild(desc);
                 prodRow.appendChild(price);
                 mainW.appendChild(prodRow);
+                ++numLines;
               }
-              return;
+              break;
            }
->>>>>>> 9d9fe11fa97d249ef459c4dace35ab1ad5284feb
         }
     }
     currCat = eID;
+    if (numLines < MAXLINES) {
+      for (var i = numLines; i < MAXLINES; i++) {
+        var prodRow = document.createElement('div');
+        prodRow.className = "invBlock";
+        mainW.appendChild(prodRow);
+      }
+    }
 };
 
 function setElem (elem) {
