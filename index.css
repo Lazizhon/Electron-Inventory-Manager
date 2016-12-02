@@ -64,7 +64,7 @@ input[type=text]:focus {
 }
 
 #mainWin {
-    padding: 20px 0 0 0;
+    padding: 0;
     display: inline-block;
     height: 1000px;
     width: 1133px;
@@ -78,21 +78,22 @@ input[type=text]:focus {
 .invBlock {
   display: block;
   border-width: thin;
+  border-style: solid;
   border-color: #aaaaaa;
-  border-style: inset;
-  width: 1075px;
-  height: 25px;
-  border-radius: 2px;
-  margin: 0 5px 5px 25px;
-  box-shadow: #aaaaaa
+  width: 1130.5px;
+  height: 30px;
+  margin: 0;
+  transition-duration: 0.4s;
+
 }
 
-.invBlock:hover{
-  background-color: #5555ff;
+.invBlock:hover {
+    border-style: inset;
+    border-color: blue;
 }
 
 .col {
-  margin: 0 25px 0 45px;
+  margin: 0 70px 0 15px;
   display: inline-block;
   width: 30px;
   height: auto;
@@ -100,7 +101,7 @@ input[type=text]:focus {
 }
 
 .prc {
-  margin: 0 25px 0 650px;
+  margin: 0 25px 0 615px;
   display: inline-block;
   width: 30px;
   height: auto;
@@ -108,7 +109,7 @@ input[type=text]:focus {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 0;
 }
 
 
@@ -156,4 +157,41 @@ input[type=text]:focus {
   margin: 5px 45px 0 50px;
   width: 50px;
   box-sizing: border-box;
+}
+
+.editBtn {
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+    border-width: 0;
+    border-color: cadetblue;
+    width: 30px !important;
+    height: 100%;
+    margin: 0;
+    background: cadetblue;
+    transition-duration: 0.4s;
+}
+
+.editBtn:hover {
+    background: white;
+}
+
+.delBtn {
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+    border-width: 0;
+    border-color: red;
+    text-decoration: none;
+    width: 30px !important;
+    height: 100%;
+    margin: 0;
+    border-style: outset;
+    border-width: thin;
+    background: red;
+    transition-duration: 0.4s;
+}
+
+.delBtn:hover {
+    background: white;
 }

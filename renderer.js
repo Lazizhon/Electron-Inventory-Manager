@@ -56,6 +56,10 @@ function fillProduct(eID) {
                 var stock   = document.createElement('div');
                 var desc    = document.createElement('div');
                 var price   = document.createElement('div');
+                var edit    = document.createElement('button');
+                var del     = document.createElement('button');
+                edit.className = "editBtn";
+                del.className  = "delBtn";
                 prodRow.className = "invBlock";
                 stock.className   = "stckBlck";
                 desc.className    = "descBlck";
@@ -66,6 +70,8 @@ function fillProduct(eID) {
                 prodRow.appendChild(stock);
                 prodRow.appendChild(desc);
                 prodRow.appendChild(price);
+                prodRow.appendChild(del);
+                prodRow.appendChild(edit);
                 mainW.appendChild(prodRow);
                 ++numLines;
               }
