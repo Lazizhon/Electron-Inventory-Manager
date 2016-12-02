@@ -3,7 +3,7 @@ html, body {
     overflow: hidden;
 }
 
-.nav ul {
+#nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ html, body {
     display: inline;
 }
 
-.nav {
+#nav {
     margin: 0 10px 30px 0;
     height: 50px;
     width: 1340px;
@@ -36,15 +36,17 @@ input[type=text]:focus {
     width:200px;
 }
 
-.sidebar {
+#sidebar {
     padding: 20px 0 0 0;
     display: inline-block;
-    height: 200px;
+    height: 800px;
     margin: 20px 0 0 0;
     width: 200px;
     float: left;
     border-width: 1px;
     font-size: 14px;
+    border-style: inset;
+    border-color: #dddddd;
 }
 
 .guide {
@@ -56,7 +58,7 @@ input[type=text]:focus {
     margin: -3px 0 3px 0;
 }
 
-.sidebar ul {
+#sidebar ul {
     list-style-type: none;
     font-family: 'Carrois Gothic', sans-serif;
 }
@@ -65,8 +67,11 @@ input[type=text]:focus {
     display: inline-block;
     height: 1000px;
     width: 1133px;
-    margin: 48px 0 0 0;
+    margin: 20px 0 0 0;
     overflow: scroll;
+    border-style: inset;
+    border-width: thin;
+    border-color: #dddddd;
 }
 
 .invBlock {
@@ -85,11 +90,28 @@ input[type=text]:focus {
 }
 
 .col {
-  margin: 0 25px 0 45px;
+  margin: 25px 25px 0 45px;
   display: inline-block;
   width: 30px;
   height: auto;
   font-family: 'Archivo Black', sans-serif;
+}
+
+.prc {
+  margin: 25px 25px 0 650px;
+  display: inline-block;
+  width: 30px;
+  height: auto;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+.ops {
+  float: right;
 }
 
 .max-btn {
@@ -106,5 +128,19 @@ input[type=text]:focus {
           border-radius: 0 !important;
 }
 
-.cat {
+#cat {
+}
+
+.prod li{
+  cursor: pointer;
+}
+
+.catBlck {
+  display: inline-block;
+  margin: 5px 45px 0 20px;
+}
+
+.price {
+  display: inline-block;
+  margin: 5px 45px 0 500px;
 }
