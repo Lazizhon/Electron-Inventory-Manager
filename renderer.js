@@ -242,6 +242,11 @@ function deleteProd(id) {
                 document.getElementById(id.id.slice(0, -2) + "R").remove();
                 --numLines;
               }
+              else if ((j + 1) == listProd.length) {
+                alert(row.id);
+                document.getElementById(id.id.slice(0, -2) + "R").remove();
+                --numLines;
+              }
             }
           }
         }
