@@ -185,7 +185,7 @@ function fillProduct(eID) {
         else {
           prodRow.className = "invBlockdr";
         }
-        prodRow.id = "R" + i;
+        prodRow.id = i + "R";
         mainW.appendChild(prodRow);
       }
     }
@@ -239,13 +239,15 @@ function deleteProd(id) {
 }
 
 function addProd() {
-  var prodRow = document.getElementById("R" + (numLines));
+  var prodRow = document.getElementById((numLines + "R"));
   ++numLines;
   var stock   = document.createElement('div');
   var desc    = document.createElement('div');
   var price   = document.createElement('div');
   var save    = document.createElement('button');
   var del     = document.createElement('button');
+  save.id = (prodRow.id.slice(0, -1) + "SB");
+  del.id = (prodRow.id.slice(0, -1) + "DB");
   save.className = "save-btn-primary";
   del.className  = "del-btn-primary";
   del.onclick = function () {
@@ -260,26 +262,26 @@ function addProd() {
   desc.addEventListener("focus", function() {
     this.setAttribute("data-initial-text", this.innerHTML);
   });
-                price.addEventListener("focus", function() {
-                  this.setAttribute("data-initial-text", this.innerHTML);
-                });
-                stock.addEventListener("blur", setSave);
-                desc.addEventListener("blur", setSave);
-                price.addEventListener("blur", setSave);
+  price.addEventListener("focus", function() {
+    this.setAttribute("data-initial-text", this.innerHTML);
+  });
+  stock.addEventListener("blur", setSave);
+  desc.addEventListener("blur", setSave);
+  price.addEventListener("blur", setSave);
 
-                stock.id   = "stckBlck";
-                desc.id    = "descBlck";
-                price.id   = "price";
-                prodRow.appendChild(stock);
-                prodRow.appendChild(desc);
-                prodRow.appendChild(price);
-                prodRow.appendChild(del);
-                prodRow.appendChild(save);
-                mainW.appendChild(prodRow);
-                ++numLines;
-                save.onclick = function () {
-                  saveProd(this);
-                };
+  stock.id   = "stckBlck";
+  desc.id    = "descBlck";
+  price.id   = "price";
+  prodRow.appendChild(stock);
+  prodRow.appendChild(desc);
+  prodRow.appendChild(price);
+  prodRow.appendChild(del);
+  prodRow.appendChild(save);
+  mainW.appendChild(prodRow);
+  ++numLines;
+  save.onclick = function () {
+    saveProd(this);
+  };
 }
 
 
