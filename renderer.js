@@ -5,6 +5,7 @@ const jsfp   = './inventory.json';
 const remote = require('electron').remote;
 const jobj   = require(jsfp); //(with path)
 const fs     = require('fs');
+const mainW = document.getElementById('mainWin');
 var docChanged = false;
 var eleChanged = false;
 
@@ -78,6 +79,7 @@ function populateSide() {
 
 function saveProd(id) {
   if (eleChanged) {
+    var found = false;
     eleChanged = false;
     var list = jobj.Guide;
     var ID = (id.id.slice(0, -2) + "R");
@@ -97,6 +99,15 @@ function saveProd(id) {
               docChanged = true;
               document.getElementById("save-btn").className="btn btn-warning";
               id.className = "save-btn-primary";
+              found = true;
+            }
+            else if ((j + 1) == listProd.length && !found) {
+              listProd.splice(listProd.length, 1, {"stockID" : children[0].innerHTML, 
+              "title" : children[1].innerHTML, "price" : children[2].innerHTML});
+              docChanged = true;
+              document.getElementById("save-btn").className="btn btn-warning";
+              id.className = "save-btn-primary";
+              found = true;
             }
           }
         }
@@ -107,10 +118,9 @@ function saveProd(id) {
 
 function fillProduct(eID) {
     eId = eID;
-    const MAXLINES = 50;
+    const MAXLINES = 200;
     numLines = 0;
     var list = jobj.Guide;
-    var mainW = document.getElementById('mainWin');
     for (var i = 0; i < list.length; i++) {
         var listCat = list[i].category;
         for (var k = 0; k < listCat.length; k++) {
@@ -240,7 +250,6 @@ function deleteProd(id) {
 
 function addProd() {
   var prodRow = document.getElementById((numLines + "R"));
-  ++numLines;
   var stock   = document.createElement('div');
   var desc    = document.createElement('div');
   var price   = document.createElement('div');
@@ -277,7 +286,6 @@ function addProd() {
   prodRow.appendChild(price);
   prodRow.appendChild(del);
   prodRow.appendChild(save);
-  mainW.appendChild(prodRow);
   ++numLines;
   save.onclick = function () {
     saveProd(this);

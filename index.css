@@ -180,6 +180,11 @@ input[type=text]:focus {
     pointer-events: none;
 }
 
+.save-btn-primary:after {
+    font-family: FontAwesome;
+    content: "\f044";
+}
+
 .save-btn-warn {
     float: right;
     display: inline-block;
@@ -191,6 +196,11 @@ input[type=text]:focus {
     margin: 0;
     background: orange;
     transition-duration: 0.4s;
+}
+
+.save-btn-warn:after {
+    font-family: FontAwesome;
+    content: "\f00c";
 }
 
 .del-btn-primary {
