@@ -133,8 +133,11 @@ function fillProduct(eID) {
                 var stock   = document.createElement('div');
                 var desc    = document.createElement('div');
                 var price   = document.createElement('div');
+                var web     = document.createElement('div');
                 var save    = document.createElement('button');
                 var del     = document.createElement('button');
+                web.className  = "web-btn-primary";
+                web.id = (listProd[j].stockID + "WB");
                 save.className = "save-btn-primary";
                 save.id = (listProd[j].stockID + "SB");
                 del.id = (listProd[j].stockID + "DB");
@@ -174,6 +177,7 @@ function fillProduct(eID) {
                 prodRow.appendChild(price);
                 prodRow.appendChild(del);
                 prodRow.appendChild(save);
+                prodRow.appendChild(web);
                 mainW.appendChild(prodRow);
                 ++numLines;
                 prodRow.id = (listProd[j].stockID + "R");
@@ -250,6 +254,7 @@ function deleteProd(id) {
 
 function addProd() {
   var prodRow = document.getElementById((numLines + "R"));
+  alert(prodRow.id);
   var stock   = document.createElement('div');
   var desc    = document.createElement('div');
   var price   = document.createElement('div');

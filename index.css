@@ -171,17 +171,17 @@ input[type=text]:focus {
     display: inline-block;
     text-decoration: none;
     border-width: 0;
-    border-color: cadetblue;
     width: 30px !important;
     height: 100%;
     margin: 0;
-    background: cadetblue;
     transition-duration: 0.4s;
+    background: transparent;
     pointer-events: none;
 }
 
 .save-btn-primary:after {
     font-family: FontAwesome;
+    color: blue;
     content: "\f044";
 }
 
@@ -190,16 +190,16 @@ input[type=text]:focus {
     display: inline-block;
     text-decoration: none;
     border-width: 0;
-    border-color: orange;
     width: 30px !important;
     height: 100%;
     margin: 0;
-    background: orange;
+    background: transparent;
     transition-duration: 0.4s;
 }
 
 .save-btn-warn:after {
     font-family: FontAwesome;
+    color: green;
     content: "\f00c";
 }
 
@@ -208,21 +208,35 @@ input[type=text]:focus {
     display: inline-block;
     text-decoration: none;
     border-width: 0;
-    border-color: red;
     text-decoration: none;
     width: 30px !important;
     height: 100%;
     margin: 0;
-    border-style: outset;
-    border-width: thin;
-    background: red;
+    background: transparent;
     transition-duration: 0.4s;
 }
 
-.del-btn-primary:hover {
-    background: white;
+.del-btn-primary:after {
+    font-family: FontAwesome;
+    color: red;
+    content: "\f014";
 }
 
-.btn btn-info {
+.web-btn-primary {
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+    border-width: 0;
+    text-decoration: none;
+    width: 30px !important;
+    height: 100%;
+    margin: 0;
+    background: transparent;
+    transition-duration: 0.4s;
+}
 
+.web-btn-primary:after {
+    font-family: FontAwesome;
+    color: gray;
+    content: "\f00e";
 }
