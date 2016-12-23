@@ -254,7 +254,6 @@ function deleteProd(id) {
 
 function addProd() {
   var prodRow = document.getElementById((numLines + "R"));
-  alert(prodRow.id);
   var stock   = document.createElement('div');
   var desc    = document.createElement('div');
   var price   = document.createElement('div');
