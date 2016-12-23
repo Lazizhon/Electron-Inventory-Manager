@@ -145,28 +145,28 @@ input[type=text]:focus {
   cursor: pointer;
 }
 
-.stckBlck {
+#stckBlck {
   display: inline-block;
   margin: 5px 25px 0 20px;
   width: 75px;
   box-sizing: border-box;
   }
 
-  .descBlck {
+  #descBlck {
   display: inline-block;
   margin: 5px 45px 0 10px;
   box-sizing: border-box;
   width: 625px;
   }
 
-.price {
+#price {
   display: inline-block;
   margin: 5px 45px 0 50px;
   width: 50px;
   box-sizing: border-box;
 }
 
-.editBtn {
+.save-btn-primary {
     float: right;
     display: inline-block;
     text-decoration: none;
@@ -177,13 +177,23 @@ input[type=text]:focus {
     margin: 0;
     background: cadetblue;
     transition-duration: 0.4s;
+    pointer-events: none;
 }
 
-.editBtn:hover {
-    background: white;
+.save-btn-warn {
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+    border-width: 0;
+    border-color: orange;
+    width: 30px !important;
+    height: 100%;
+    margin: 0;
+    background: orange;
+    transition-duration: 0.4s;
 }
 
-.delBtn {
+.del-btn-primary {
     float: right;
     display: inline-block;
     text-decoration: none;
@@ -199,6 +209,10 @@ input[type=text]:focus {
     transition-duration: 0.4s;
 }
 
-.delBtn:hover {
+.del-btn-primary:hover {
     background: white;
+}
+
+.btn btn-info {
+
 }
