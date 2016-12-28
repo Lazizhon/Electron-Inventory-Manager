@@ -14,22 +14,22 @@
   <body>
     <div id="nav">
       <ul>
-        <li class="btns"><button class="btn btn-danger" id="close-btn">x</button></li>
-        <li class="btns"><button class="btn btn-primary" id="save-btn"><span class="glyphicon glyphicon-floppy-save"></span></button></li>
-        <li class="btns"><button class="btn btn-primary"><span class="glyphicon glyphicon-print"></span></button></li>
-        <li class="btns"><button class="btn btn-primary" id="add-btn"><span class="glyphicon glyphicon-plus"></span></button></li>
-        <li><div class="search-btn-primary"></div></li>
-        <li><input type="text" name="search" placeholder="search..."></li>
+        <li><button class="save-btn-main" id="save-btn"></button></li>
+        <li><button class="add-btn-primary" id="add-btn"></button></li>
+        <li><div id="close-search-btn" class="close-search-btn-primary"></div></li>
+        <li><div id="search-btn" class="search-btn-primary"></div></li>
+        <li><input id="search-bar" type="text" name="search" placeholder="search..."></li>
       </ul>
     </div>
+    <div class="guide">Guides</div>
     <div id="sidebar">
-      <span class="guide"> GUIDES </span> <hr class="underline">
       <ul id="cat">
       </ul>
     </div>
       <div class="col">StockID</div>
       <div class="col">Description</div>
       <div class="prc">Price</div>
+      <div class="col">Qty</div>
     <div id="mainWin">
     </div>
   </body>

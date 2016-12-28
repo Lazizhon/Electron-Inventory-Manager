@@ -15,7 +15,13 @@ var numLines;
 
 var eId;
 
-document.getElementById("close-btn").addEventListener("click", function(e) {
+let searchBar = document.getElementById("search-bar");
+var prevText;
+let targRow;
+let trPrevClass;
+let searchVal;
+
+/*document.getElementById("close-btn").addEventListener("click", function(e) {
     var window = remote.getCurrentWindow();
     if (docChanged || eleChanged) {
       if (confirm("Exit without saving?")) {
@@ -25,6 +31,37 @@ document.getElementById("close-btn").addEventListener("click", function(e) {
     else {
       window.close();
     }
+});*/
+
+                
+searchBar.addEventListener("focus", function() {
+  if(searchBar.value)
+    this.setAttribute("data-initial-text", this.value);
+});
+searchBar.addEventListener("blur", removeHighlight);   
+
+
+searchBar.addEventListener("keypress", function(e) {
+  if (e.keyCode === 13) {
+    if (targRow)
+      targRow.className = trPrevClass;
+    searchVal = searchBar.value;
+    search();
+  }
+})
+
+document.getElementById("close-search-btn").addEventListener("click", function(e) {
+  searchBar.value = null;
+  removeHighlight();
+});
+
+function removeHighlight () {
+  if(this.value !== searchVal)
+    targRow.className = trPrevClass;
+}
+
+document.getElementById("search-btn").addEventListener("click", function(e) {
+  search();
 });
 
 document.getElementById("add-btn").addEventListener("click", function(e) {
@@ -35,9 +72,9 @@ document.getElementById("save-btn").addEventListener("click", function (e) {
   if (docChanged) {
   docChanged = false;
     this.className = "btn btn-primary";
-    var jsav = JSON.stringify(jobj);
+    var jsav = JSON.stringify(jobj, null, 2);
     fs.writeFile(jsfp, jsav, function (err) {
-      if(err){
+      if(err) {
             alert("An error ocurred updating the file"+ err.message);
             console.log(err);
             return;
@@ -50,6 +87,15 @@ document.getElementById("save-btn").addEventListener("click", function (e) {
 
 
 populateSide();
+
+function search () {
+  if (searchBar.value) {
+    targRow = document.getElementById((searchBar.value + "R").toUpperCase());
+    trPrevClass = targRow.className;
+    //targRow.scrollTo();
+    targRow.className = "highlight";
+  }
+};
 
 function populateSide() {
   var list = jobj.Guide;
@@ -78,9 +124,8 @@ function populateSide() {
 };
 
 function saveProd(id) {
-  if (eleChanged) {
-    var found = false;
-    eleChanged = false;
+  if (id.getAttribute("eleChanged")) {
+    var found = false;   
     var list = jobj.Guide;
     var ID = (id.id.slice(0, -2) + "R");
     var row = document.getElementById(ID);
@@ -100,6 +145,7 @@ function saveProd(id) {
               document.getElementById("save-btn").className="btn btn-warning";
               id.className = "save-btn-primary";
               found = true;
+              id.setAttribute("eleChanged", false);
             }
             else if ((j + 1) == listProd.length && !found) {
               listProd.splice(listProd.length, 1, {"stockID" : children[0].innerHTML, 
@@ -108,6 +154,7 @@ function saveProd(id) {
               document.getElementById("save-btn").className="btn btn-warning";
               id.className = "save-btn-primary";
               found = true;
+              id.setAttribute("eleChanged", false);
             }
           }
         }
@@ -118,6 +165,7 @@ function saveProd(id) {
 
 function fillProduct(eID) {
     eId = eID;
+    searchBar.placeholder = "Search in " + eID + "...";
     const MAXLINES = 200;
     numLines = 0;
     var list = jobj.Guide;
@@ -133,11 +181,16 @@ function fillProduct(eID) {
                 var stock   = document.createElement('div');
                 var desc    = document.createElement('div');
                 var price   = document.createElement('div');
-                var web     = document.createElement('div');
+                var qty     = document.createElement('div');
+                var web     = document.createElement('button');
                 var save    = document.createElement('button');
                 var del     = document.createElement('button');
                 web.className  = "web-btn-primary";
-                web.id = (listProd[j].stockID + "WB");
+                web.id = (listProd[j].url);
+                // web.innerHTML = listProd[j].URL;
+                web.onclick = function () {
+                  openAddr(this);
+                };
                 save.className = "save-btn-primary";
                 save.id = (listProd[j].stockID + "SB");
                 del.id = (listProd[j].stockID + "DB");
@@ -148,6 +201,7 @@ function fillProduct(eID) {
                 stock.contentEditable = true;
                 desc.contentEditable  = true;
                 price.contentEditable = true;
+                qty.contentEditable   = true;
                 stock.addEventListener("focus", function() {
                   this.setAttribute("data-initial-text", this.innerHTML);
                 });
@@ -157,6 +211,10 @@ function fillProduct(eID) {
                 price.addEventListener("focus", function() {
                   this.setAttribute("data-initial-text", this.innerHTML);
                 });
+                qty.addEventListener("focus", function() {
+                  this.setAttribute("data-initial-text", this.innerHTML);
+                });
+                qty.addEventListener("blur", setSave);               
                 stock.addEventListener("blur", setSave);
                 desc.addEventListener("blur", setSave);
                 price.addEventListener("blur", setSave);
@@ -169,12 +227,15 @@ function fillProduct(eID) {
                 stock.id   = "stckBlck";
                 desc.id    = "descBlck";
                 price.id   = "price";
+                qty.id     = "qtyBlck";
                 stock.innerHTML = listProd[j].stockID;
                 desc.innerHTML  = listProd[j].title;
                 price.innerHTML = listProd[j].price;
+                qty.innerHTML   = listProd[j].qty;
                 prodRow.appendChild(stock);
                 prodRow.appendChild(desc);
                 prodRow.appendChild(price);
+                prodRow.appendChild(qty);
                 prodRow.appendChild(del);
                 prodRow.appendChild(save);
                 prodRow.appendChild(web);
@@ -220,9 +281,10 @@ function setSave () {
   if (this.getAttribute("data-initial-text") !== this.innerHTML) {
     var sbn = document.getElementById(this.parentNode.id.slice(0, -1) + "SB");
     sbn.className = "save-btn-warn";
-    eleChanged = true;
+    sbn.setAttribute("eleChanged", true);
   }
 }
+
 
 function deleteProd(id) {
     if(confirm("Confirm Delete")) {
@@ -241,11 +303,14 @@ function deleteProd(id) {
                 document.getElementById("save-btn").className="btn btn-warning";
                 document.getElementById(id.id.slice(0, -2) + "R").remove();
                 --numLines;
+                currCat = -1;
+                fillProduct(eId);
               }
               else if ((j + 1) == listProd.length) {
-                alert(row.id);
                 document.getElementById(id.id.slice(0, -2) + "R").remove();
                 --numLines;
+                currCat = -1;
+                fillProduct(eId);
               }
             }
           }
@@ -299,6 +364,10 @@ function addProd() {
   save.onclick = function () {
     saveProd(this);
   };
+}
+
+function openAddr(bID) {
+  window.open(bID.id, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes");
 }
 
 

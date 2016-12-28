@@ -3,11 +3,6 @@ html, body {
     overflow: hidden;
 }
 
-#nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
 .btns {
     margin: 0 0 0 -2px;
@@ -20,19 +15,16 @@ html, body {
     width: 1340px;
 }
 
-#toolbar {
-    margin: 0 10px 30px 0;
-    height: 50px;
-    width: 1340px;
-}
-
-#toolbar ul {
+#nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+
 input[type=text] {
+    font-size: .8em;
+    margin: -30px 45px 0 -50px;
     float:right;
     width: 130px;
     height: 25px;
@@ -48,28 +40,24 @@ input[type=text]:focus {
     width:200px;
 }
 
-input[type=text]:before {
-    font-family: FontAwesome;
-    color: lightslategray;
-    content: "\f002";
-}
-
 #sidebar {
-    padding: 20px 0 0 0;
+    padding: 5px 0 0 0;
     display: inline-block;
     height: 800px;
-    margin: 20px 0 0 0;
+    margin: 20px 0 0 -25px;
     width: 200px;
     float: left;
     border-width: .5px;
     font-size: 14px;
-    border-style: inset;
     border-color: #dddddd;
 }
 
 .guide {
-    text-align: center;
-    font-family: 'Archivo Black', sans-serif;
+  margin: 0 115px 0 -150px;
+  display: inline-block;
+  width: 30px;
+  height: auto;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 .underline {
@@ -112,10 +100,6 @@ input[type=text]:before {
   transition-duration: 0.1s;
 }
 
-.invBlock:hover {
-    border-style: inset;
-    border-color: blue;
-}
 
 .col {
   margin: 0 70px 0 15px;
@@ -134,7 +118,7 @@ input[type=text]:before {
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+    width: .5px;
 }
 
 
@@ -161,6 +145,13 @@ input[type=text]:before {
 
 .prod li{
   cursor: pointer;
+
+}
+
+.prod li:hover {
+    background-color: #dddddd;
+    text-decoration: none;
+    border-radius: 1px;
 }
 
 #stckBlck {
@@ -168,6 +159,8 @@ input[type=text]:before {
   margin: 5px 25px 0 20px;
   width: 75px;
   box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
   }
 
   #descBlck {
@@ -175,12 +168,23 @@ input[type=text]:before {
   margin: 5px 45px 0 10px;
   box-sizing: border-box;
   width: 625px;
+  white-space: nowrap;
+  overflow: hidden;
   }
 
 #price {
   display: inline-block;
-  margin: 5px 45px 0 50px;
-  width: 50px;
+  margin: 5px -20px 0 50px;
+  width: 65px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#qtyBlck {
+  display: inline-block;
+  margin: 5px -50px 0 50px;
+  width: 30px;
   box-sizing: border-box;
 }
 
@@ -221,6 +225,38 @@ input[type=text]:before {
     content: "\f00c";
 }
 
+.save-btn-main {
+    margin: 0 0 0 0;
+    display: inline;
+    width: 30px;
+    height: 30px;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.save-btn-main:after {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    color: blue;
+    content: "\f044";
+}
+
+.add-btn-primary {
+    margin: 0 0 0 -2px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.add-btn-primary:after {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    color: blue;
+    content: "\f044";
+}
+
 .del-btn-primary {
     float: right;
     display: inline-block;
@@ -251,6 +287,7 @@ input[type=text]:before {
     margin: 0;
     background: transparent;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .web-btn-primary:after {
@@ -261,14 +298,13 @@ input[type=text]:before {
 
 .search-btn-primary {
     float: right;
+    margin: -30px 25px 0 -200px;
     cursor: pointer;
-    display: inline-block;
     text-decoration: none;
     border-width: 0;
     text-decoration: none;
-    width: 30px !important;
+    width: 15px !important;
     height: 100%;
-    margin: 0 0 0 10px;
     background: transparent;
     transition-duration: 0.4s;
 }
@@ -277,4 +313,31 @@ input[type=text]:before {
     font-family: FontAwesome;
     color: gray;
     content: "\f002";
+}
+
+.close-search-btn-primary {
+    float: right;
+    margin: -30px 0 0 5px;
+    cursor: pointer;
+    text-decoration: none;
+    border-width: 0;
+    text-decoration: none;
+    width: 15px !important;
+    height: 100%;
+    background: transparent;
+    transition-duration: 0.4s;
+}
+
+.close-search-btn-primary:after {
+    font-family: FontAwesome;
+    color: gray;
+    content: "\f00d";
+}
+
+.tDiv {
+    background-color: red;
+}
+
+.highlight {
+    background-color:rgba(0, 128, 0, .3)
 }
