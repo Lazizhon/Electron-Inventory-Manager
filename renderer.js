@@ -8,6 +8,7 @@ const fs     = require('fs');
 const mainW = document.getElementById('mainWin');
 var docChanged = false;
 var eleChanged = false;
+let editing = false;
 
 var currCat;
 var times = 0;
@@ -71,7 +72,7 @@ document.getElementById("add-btn").addEventListener("click", function(e) {
 document.getElementById("save-btn").addEventListener("click", function (e) {
   if (docChanged) {
   docChanged = false;
-    this.className = "btn btn-primary";
+    this.className = "save-btn-main";
     var jsav = JSON.stringify(jobj, null, 2);
     fs.writeFile(jsfp, jsav, function (err) {
       if(err) {
@@ -124,10 +125,9 @@ function populateSide() {
 };
 
 function saveProd(id) {
-  if (id.getAttribute("eleChanged")) {
     var found = false;   
     var list = jobj.Guide;
-    var ID = (id.id.slice(0, -2) + "R");
+    var ID = id.id.slice(0, -2) + "R";
     var row = document.getElementById(ID);
     for (var i = 0; i < list.length; i++) {
       var listCat = list[i].category;
@@ -140,27 +140,21 @@ function saveProd(id) {
               listProd[j].stockID = children[0].innerHTML;
               listProd[j].title = children[1].innerHTML;
               listProd[j].price = children[2].innerHTML;
-              id.id = (children[0].innerHTML + "SB");
               docChanged = true;
-              document.getElementById("save-btn").className="btn btn-warning";
-              id.className = "save-btn-primary";
+              document.getElementById("save-btn").className="save-btn-warn";
               found = true;
-              id.setAttribute("eleChanged", false);
             }
             else if ((j + 1) == listProd.length && !found) {
               listProd.splice(listProd.length, 1, {"stockID" : children[0].innerHTML, 
               "title" : children[1].innerHTML, "price" : children[2].innerHTML});
               docChanged = true;
-              document.getElementById("save-btn").className="btn btn-warning";
-              id.className = "save-btn-primary";
+              document.getElementById("save-btn").className="save-btn-warn";
               found = true;
-              id.setAttribute("eleChanged", false);
             }
           }
         }
       }
     }
-  }
 }
 
 function fillProduct(eID) {
@@ -183,67 +177,60 @@ function fillProduct(eID) {
                 var price   = document.createElement('div');
                 var qty     = document.createElement('div');
                 var web     = document.createElement('button');
-                var save    = document.createElement('button');
+                var edit    = document.createElement('button');
                 var del     = document.createElement('button');
+                var form    = document.createElement('button');
                 web.className  = "web-btn-primary";
+                form.className = "form-btn-primary";
                 web.id = (listProd[j].url);
-                // web.innerHTML = listProd[j].URL;
                 web.onclick = function () {
                   openAddr(this);
                 };
-                save.className = "save-btn-primary";
-                save.id = (listProd[j].stockID + "SB");
+                edit.className = "edit-btn-primary";
+                edit.id = (listProd[j].stockID + "EB");
+                form.id = (listProd[j].stockID + "FB");
                 del.id = (listProd[j].stockID + "DB");
                 del.className  = "del-btn-primary";
                 del.onclick = function () {
                   deleteProd(this);
                 };
-                stock.contentEditable = true;
-                desc.contentEditable  = true;
-                price.contentEditable = true;
-                qty.contentEditable   = true;
-                stock.addEventListener("focus", function() {
-                  this.setAttribute("data-initial-text", this.innerHTML);
-                });
-                desc.addEventListener("focus", function() {
-                  this.setAttribute("data-initial-text", this.innerHTML);
-                });
-                price.addEventListener("focus", function() {
-                  this.setAttribute("data-initial-text", this.innerHTML);
-                });
-                qty.addEventListener("focus", function() {
-                  this.setAttribute("data-initial-text", this.innerHTML);
-                });
-                qty.addEventListener("blur", setSave);               
-                stock.addEventListener("blur", setSave);
-                desc.addEventListener("blur", setSave);
-                price.addEventListener("blur", setSave);
+
+                form.onclick = function () {
+                  formControl(this);
+                };
+                
                 if (j % 2 == 0) {
                   prodRow.className = "invBlocklt";
                 }
                 else {
                   prodRow.className = "invBlockdr"
                 }
-                stock.id   = "stckBlck";
-                desc.id    = "descBlck";
-                price.id   = "price";
-                qty.id     = "qtyBlck";
-                stock.innerHTML = listProd[j].stockID;
-                desc.innerHTML  = listProd[j].title;
-                price.innerHTML = listProd[j].price;
-                qty.innerHTML   = listProd[j].qty;
+                stock.className   = "stock";
+                desc.className    = "desc";
+                price.className   = "price";
+                qty.className     = "qty";
+                prodRow.id        = listProd[j].stockID + "R";
+                stock.id          = listProd[j].stockID + "S";
+                desc.id           = listProd[j].stockID + "D";
+                price.id          = listProd[j].stockID + "P";
+                qty.id            = listProd[j].stockID + "Q";
+                stock.innerHTML   = listProd[j].stockID;
+                desc.innerHTML    = listProd[j].title;
+                price.innerHTML   = listProd[j].price;
+                qty.innerHTML     = listProd[j].qty;
                 prodRow.appendChild(stock);
                 prodRow.appendChild(desc);
                 prodRow.appendChild(price);
                 prodRow.appendChild(qty);
                 prodRow.appendChild(del);
-                prodRow.appendChild(save);
+                prodRow.appendChild(edit);
                 prodRow.appendChild(web);
+                prodRow.appendChild(form);
                 mainW.appendChild(prodRow);
                 ++numLines;
-                prodRow.id = (listProd[j].stockID + "R");
-                save.onclick = function () {
-                  saveProd(this);
+                edit.setAttribute("status", false);
+                edit.onclick = function () {
+                  setEdit(this);
                 };
               }
               break;
@@ -267,7 +254,42 @@ function fillProduct(eID) {
 };
 
 function setElem (elem) {
+  elem.className = "active";
   fillProduct(elem.id);
+}
+
+function setEdit (ebtn) { 
+  var status = ebtn.getAttribute("status");
+  var stock  = document.getElementById(ebtn.id.slice(0, -2) + "S");
+  var desc   = document.getElementById(ebtn.id.slice(0, -2) + "D");
+  var price  = document.getElementById(ebtn.id.slice(0, -2) + "P");
+  var qty    = document.getElementById(ebtn.id.slice(0, -2) + "Q");
+  if (status === "false") {
+    ebtn.className = "edit-btn-confirm";
+    ebtn.setAttribute("status", true);
+    stock.contentEditable = true;
+    desc.contentEditable  = true;
+    price.contentEditable = true;
+    qty.contentEditable   = true;
+    stock.setAttribute("orig-content", stock.innerHTML);
+    desc.setAttribute("orig-content", desc.innerHTML);
+    price.setAttribute("orig-content", price.innerHTML);
+    qty.setAttribute("orig-content", qty.innerHTML);
+  }
+  else {
+    ebtn.className = "edit-btn-primary";
+    ebtn.setAttribute("status", false);
+    stock.contentEditable = false;
+    desc.contentEditable  = false;
+    price.contentEditable = false;
+    qty.contentEditable   = false;
+    if (stock.getAttribute("orig-content") !== stock.innerHTML   ||
+        desc.getAttribute("orig-content")  !== desc.innerHTML    ||
+        price.getAttribute("orig-content") !== price.innerHTML   ||
+        qty.getAttribute("orig-content")   !== qty.innerHTML) {
+          saveProd(ebtn);
+      }
+  }
 }
 
 function removeElems (cName) {
@@ -279,9 +301,7 @@ function removeElems (cName) {
 
 function setSave () {
   if (this.getAttribute("data-initial-text") !== this.innerHTML) {
-    var sbn = document.getElementById(this.parentNode.id.slice(0, -1) + "SB");
-    sbn.className = "save-btn-warn";
-    sbn.setAttribute("eleChanged", true);
+    saveProd(this);
   }
 }
 
@@ -322,6 +342,7 @@ function deleteProd(id) {
     }
 }
 
+// TODO : FIX AFTER FILLPRODUCT CHANGE
 function addProd() {
   var prodRow = document.getElementById((numLines + "R"));
   var stock   = document.createElement('div');
@@ -336,21 +357,7 @@ function addProd() {
   del.onclick = function () {
     deleteProd(this);
   };
-  stock.contentEditable = true;
-  desc.contentEditable  = true;
-  price.contentEditable = true;
-  stock.addEventListener("focus", function() {
-    this.setAttribute("data-initial-text", this.innerHTML);
-  });
-  desc.addEventListener("focus", function() {
-    this.setAttribute("data-initial-text", this.innerHTML);
-  });
-  price.addEventListener("focus", function() {
-    this.setAttribute("data-initial-text", this.innerHTML);
-  });
-  stock.addEventListener("blur", setSave);
-  desc.addEventListener("blur", setSave);
-  price.addEventListener("blur", setSave);
+
 
   stock.id   = "stckBlck";
   desc.id    = "descBlck";
@@ -367,8 +374,19 @@ function addProd() {
 }
 
 function openAddr(bID) {
-  window.open(bID.id, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes");
+};
+
+function formFill() {
+    alert("H");
+    //var stock  = document.getElementById(fb.id.slice(0, -2) + "S");
+    var stockForm = document.getElementById('stockText');
+    document.getElementById("stockText").value = "HI";
+    //stockForm.value = "HELLO";
 }
 
+function formControl (fb) {
+  let form = window.open("./inventory-form.html",'width=500,height=300');
+  form.onload = function () {alert("HEY");};
+};
 
 

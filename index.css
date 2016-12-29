@@ -11,8 +11,9 @@ html, body {
 
 #nav {
     margin: 0 10px 30px 0;
-    height: 50px;
-    width: 1340px;
+    height: 30px;
+    width: 1375px;
+    background-color:rgba(255, 255, 255, .6)
 }
 
 #nav ul {
@@ -21,11 +22,159 @@ html, body {
     padding: 0;
 }
 
+#nav li {
+    display: inline;
+}
+
+.open-btn-main {
+    margin: 0 10px 0 10px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.open-btn-main:after {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    color: darkblue;
+    content: "\f115";
+}
+
+.save-btn-main {
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.save-btn-main:after {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    color: gray;
+    content: "\f0c7";
+}
+
+.save-btn-warn {
+    cursor: pointer;
+    margin: 0 auto;
+    display: inline;
+    transition-duration: 0.6s;
+    background: transparent;
+}
+
+.save-btn-warn:after {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    color: darkorange;
+    content: "\f0c7";
+}
+
+.add-btn-primary {
+    margin: 0 10px 0 10px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.add-btn-primary:after {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f055";
+}
+
+.print-btn-primary {
+    margin: 0 10px 0 10px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.print-btn-primary:after {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f02f";
+}
+
+.search-bar-primary {
+    display: inline;
+    position: absolute;
+    left: 1125px;
+}
+
+
+.undo-btn-primary {
+    margin: 0 10px 0 10px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.undo-btn-primary:after {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f0e2";
+}
+
+.search-btn-primary {
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+    position: absolute;
+    left: 1100px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.search-btn-primary:after {
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f002";
+}
+
+.close-search-btn-primary {
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+    position: absolute;
+    left: 1102px;
+    top: 20px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.close-search-btn-primary:after {
+    font-family: FontAwesome;
+    color: darkred;
+    content: "\f00d";
+}
+
+.settings-btn-primary {
+    margin: 0 5px 0 5px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.settings-btn-primary:after {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f013";
+}
 
 input[type=text] {
     font-size: .8em;
-    margin: -30px 45px 0 -50px;
-    float:right;
     width: 130px;
     height: 25px;
     border: 2px solid #ccc;
@@ -44,10 +193,12 @@ input[type=text]:focus {
     padding: 5px 0 0 0;
     display: inline-block;
     height: 800px;
-    margin: 20px 0 0 -25px;
+    margin: 20px 5px 0 -25px;
     width: 200px;
     float: left;
     border-width: .5px;
+    border-style: solid;
+    border-radius: 7px;
     font-size: 14px;
     border-color: #dddddd;
 }
@@ -71,20 +222,21 @@ input[type=text]:focus {
 
 #mainWin {
     padding: 0;
+    border-radius: 4px;
     display: inline-block;
     height: 1000px;
-    width: 1133px;
+    width: 1185px;
     margin: 0 0 0 0;
     overflow: scroll;
-    border-style: inset;
-    border-width: thin;
+    border-style: solid;
+    border-width: .5px;
     border-color: #dddddd;
 }
 
 .invBlocklt {
   display: block;
   border: none;
-  width: 1130.5px;
+  width: 1190px;
   height: 30px;
   margin: 0;
   transition-duration: 0.1s;
@@ -94,7 +246,7 @@ input[type=text]:focus {
 .invBlockdr {
   display: block;
   border: none;
-  width: 1130.5px;
+  width: 1190px;
   height: 30px;
   margin: 0;
   transition-duration: 0.1s;
@@ -145,16 +297,22 @@ input[type=text]:focus {
 
 .prod li{
   cursor: pointer;
+  text-decoration: none;
 
 }
 
 .prod li:hover {
-    background-color: #dddddd;
+    background-color: darkred;
+    color: white;
     text-decoration: none;
     border-radius: 1px;
 }
 
-#stckBlck {
+.active {
+    background-color: darkblue;
+}
+
+.stock {
   display: inline-block;
   margin: 5px 25px 0 20px;
   width: 75px;
@@ -163,7 +321,7 @@ input[type=text]:focus {
   overflow: hidden;
   }
 
-  #descBlck {
+  .desc {
   display: inline-block;
   margin: 5px 45px 0 10px;
   box-sizing: border-box;
@@ -172,7 +330,7 @@ input[type=text]:focus {
   overflow: hidden;
   }
 
-#price {
+.price {
   display: inline-block;
   margin: 5px -20px 0 50px;
   width: 65px;
@@ -181,14 +339,14 @@ input[type=text]:focus {
   overflow: hidden;
 }
 
-#qtyBlck {
+.qty {
   display: inline-block;
   margin: 5px -50px 0 50px;
   width: 30px;
   box-sizing: border-box;
 }
 
-.save-btn-primary {
+.edit-btn-primary {
     float: right;
     display: inline-block;
     text-decoration: none;
@@ -198,16 +356,15 @@ input[type=text]:focus {
     margin: 0;
     transition-duration: 0.4s;
     background: transparent;
-    pointer-events: none;
 }
 
-.save-btn-primary:after {
+.edit-btn-primary:after {
     font-family: FontAwesome;
     color: blue;
     content: "\f044";
 }
 
-.save-btn-warn {
+.edit-btn-confirm {
     float: right;
     display: inline-block;
     text-decoration: none;
@@ -219,42 +376,10 @@ input[type=text]:focus {
     transition-duration: 0.4s;
 }
 
-.save-btn-warn:after {
+.edit-btn-confirm:after {
     font-family: FontAwesome;
     color: green;
     content: "\f00c";
-}
-
-.save-btn-main {
-    margin: 0 0 0 0;
-    display: inline;
-    width: 30px;
-    height: 30px;
-    transition-duration: 0.4s;
-    background: transparent;
-}
-
-.save-btn-main:after {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: 1.5em;
-    color: blue;
-    content: "\f044";
-}
-
-.add-btn-primary {
-    margin: 0 0 0 -2px;
-    display: inline;
-    transition-duration: 0.4s;
-    background: transparent;
-}
-
-.add-btn-primary:after {
-    display: inline-block;
-    font-size: 1.5em;
-    font-family: FontAwesome;
-    color: blue;
-    content: "\f044";
 }
 
 .del-btn-primary {
@@ -272,7 +397,7 @@ input[type=text]:focus {
 
 .del-btn-primary:after {
     font-family: FontAwesome;
-    color: red;
+    color: darkred;
     content: "\f014";
 }
 
@@ -296,48 +421,32 @@ input[type=text]:focus {
     content: "\f00e";
 }
 
-.search-btn-primary {
+.form-btn-primary {
     float: right;
-    margin: -30px 25px 0 -200px;
-    cursor: pointer;
+    display: inline-block;
     text-decoration: none;
     border-width: 0;
     text-decoration: none;
-    width: 15px !important;
+    width: 30px !important;
     height: 100%;
+    margin: 0;
     background: transparent;
     transition-duration: 0.4s;
-}
-
-.search-btn-primary:after {
-    font-family: FontAwesome;
-    color: gray;
-    content: "\f002";
-}
-
-.close-search-btn-primary {
-    float: right;
-    margin: -30px 0 0 5px;
     cursor: pointer;
-    text-decoration: none;
-    border-width: 0;
-    text-decoration: none;
-    width: 15px !important;
-    height: 100%;
-    background: transparent;
-    transition-duration: 0.4s;
 }
 
-.close-search-btn-primary:after {
+.form-btn-primary:after {
     font-family: FontAwesome;
     color: gray;
-    content: "\f00d";
+    content: "\f0ce";
 }
+
 
 .tDiv {
     background-color: red;
 }
 
 .highlight {
-    background-color:rgba(0, 128, 0, .3)
+    background-color:darkblue;
+    color: white;
 }
