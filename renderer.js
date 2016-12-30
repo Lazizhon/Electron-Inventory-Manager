@@ -3,6 +3,7 @@
 // All of the Node.js APIs are available in this process.
 const jsfp   = './inventory.json';
 const remote = require('electron').remote;
+const {BrowserWindow} = require('electron').remote
 const jobj   = require(jsfp); //(with path)
 const fs     = require('fs');
 const mainW = document.getElementById('mainWin');
@@ -13,7 +14,7 @@ let editing = false;
 var currCat;
 var times = 0;
 var numLines;
-
+var loaded = false;
 var eId;
 
 let searchBar = document.getElementById("search-bar");
@@ -22,20 +23,13 @@ let targRow;
 let trPrevClass;
 let searchVal;
 
-/*document.getElementById("close-btn").addEventListener("click", function(e) {
-    var window = remote.getCurrentWindow();
-    if (docChanged || eleChanged) {
-      if (confirm("Exit without saving?")) {
-        window.close();
-      }
-    }
-    else {
-      window.close();
-    }
-});*/
-
-                
-searchBar.addEventListener("focus", function() {
+if (!loaded) {
+  loaded = true;
+  window.onload = function () {
+    populateSide();
+    populateNav();
+  };
+  searchBar.addEventListener("focus", function() {
   if(searchBar.value)
     this.setAttribute("data-initial-text", this.value);
 });
@@ -56,12 +50,7 @@ document.getElementById("close-search-btn").addEventListener("click", function(e
   removeHighlight();
 });
 
-function removeHighlight () {
-  if(this.value !== searchVal)
-    targRow.className = trPrevClass;
-}
-
-document.getElementById("search-btn").addEventListener("click", function(e) {
+  document.getElementById("search-btn").addEventListener("click", function(e) {
   search();
 });
 
@@ -85,9 +74,29 @@ document.getElementById("save-btn").addEventListener("click", function (e) {
  });
 }
 })
+}
+
+/*document.getElementById("close-btn").addEventListener("click", function(e) {
+    var window = remote.getCurrentWindow();
+    if (docChanged || eleChanged) {
+      if (confirm("Exit without saving?")) {
+        window.close();
+      }
+    }
+    else {
+      window.close();
+    }
+});*/
+
+                
 
 
-populateSide();
+function removeHighlight () {
+  if(this.value !== searchVal)
+    targRow.className = trPrevClass;
+}
+
+
 
 function search () {
   if (searchBar.value) {
@@ -96,6 +105,14 @@ function search () {
     //targRow.scrollTo();
     targRow.className = "highlight";
   }
+};
+
+function populateNav() {
+  var make = document.getElementById("slt-make");
+  var type = document.getElementById("slt-type");
+  var option = document.createElement('option');
+  option.appendChild(document.createTextNode("HI"));
+  make.appendChild(option);
 };
 
 function populateSide() {
@@ -383,10 +400,23 @@ function formFill() {
     document.getElementById("stockText").value = "HI";
     //stockForm.value = "HELLO";
 }
+function alertWin () {
+  alert("HI");
+};
 
 function formControl (fb) {
-  let form = window.open("./inventory-form.html",'width=500,height=300');
-  form.onload = function () {alert("HEY");};
-};
+  var rowDiv = document.getElementById((fb.id.slice(0, -2)) + "R");
+  let rowChi = rowDiv.childNodes;
+  rowDiv.className = ("invBlock-exp");
+  let sTitle = document.createElement('div');
+  sTitle.className = "textTitle";
+  sTitle.appendChild(document.createTextNode("StockID"));
+  let sTextArea = document.createElement('textarea');
+  sTextArea.className = "textBox";
+  sTextArea.value = rowChi[0].innerHTML;
+  rowDiv.appendChild(sTitle);
+  rowDiv.appendChild(sTextArea);
+}
+
 
 
