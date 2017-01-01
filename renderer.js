@@ -3,28 +3,55 @@
 // All of the Node.js APIs are available in this process.
 const jsfp   = './inventory.json';
 const remote = require('electron').remote;
+const {BrowserWindow} = require('electron').remote
 const jobj   = require(jsfp); //(with path)
 const fs     = require('fs');
 const mainW = document.getElementById('mainWin');
 var docChanged = false;
 var eleChanged = false;
+let editing = false;
 
 var currCat;
 var times = 0;
 var numLines;
-
+var loaded = false;
 var eId;
 
-document.getElementById("close-btn").addEventListener("click", function(e) {
-    var window = remote.getCurrentWindow();
-    if (docChanged || eleChanged) {
-      if (confirm("Exit without saving?")) {
-        window.close();
-      }
-    }
-    else {
-      window.close();
-    }
+let searchBar = document.getElementById("search-bar");
+var prevText;
+let targRow;
+let trPrevClass;
+let searchVal;
+
+if (!loaded) {
+  loaded = true;
+  window.onload = function () {
+    populateSide();
+    populateNav();
+  };
+  searchBar.addEventListener("focus", function() {
+  if(searchBar.value)
+    this.setAttribute("data-initial-text", this.value);
+});
+searchBar.addEventListener("blur", removeHighlight);   
+
+
+searchBar.addEventListener("keypress", function(e) {
+  if (e.keyCode === 13) {
+    if (targRow)
+      targRow.className = trPrevClass;
+    searchVal = searchBar.value;
+    search();
+  }
+})
+
+document.getElementById("close-search-btn").addEventListener("click", function(e) {
+  searchBar.value = null;
+  removeHighlight();
+});
+
+  document.getElementById("search-btn").addEventListener("click", function(e) {
+  search();
 });
 
 document.getElementById("add-btn").addEventListener("click", function(e) {
@@ -34,10 +61,10 @@ document.getElementById("add-btn").addEventListener("click", function(e) {
 document.getElementById("save-btn").addEventListener("click", function (e) {
   if (docChanged) {
   docChanged = false;
-    this.className = "btn btn-primary";
-    var jsav = JSON.stringify(jobj);
+    this.className = "save-btn-main";
+    var jsav = JSON.stringify(jobj, null, 2);
     fs.writeFile(jsfp, jsav, function (err) {
-      if(err){
+      if(err) {
             alert("An error ocurred updating the file"+ err.message);
             console.log(err);
             return;
@@ -47,9 +74,46 @@ document.getElementById("save-btn").addEventListener("click", function (e) {
  });
 }
 })
+}
+
+/*document.getElementById("close-btn").addEventListener("click", function(e) {
+    var window = remote.getCurrentWindow();
+    if (docChanged || eleChanged) {
+      if (confirm("Exit without saving?")) {
+        window.close();
+      }
+    }
+    else {
+      window.close();
+    }
+});*/
+
+                
 
 
-populateSide();
+function removeHighlight () {
+  if(this.value !== searchVal)
+    targRow.className = trPrevClass;
+}
+
+
+
+function search () {
+  if (searchBar.value) {
+    targRow = document.getElementById((searchBar.value + "R").toUpperCase());
+    trPrevClass = targRow.className;
+    //targRow.scrollTo();
+    targRow.className = "highlight";
+  }
+};
+
+function populateNav() {
+  var make = document.getElementById("slt-make");
+  var type = document.getElementById("slt-type");
+  var option = document.createElement('option');
+  option.appendChild(document.createTextNode("HI"));
+  make.appendChild(option);
+};
 
 function populateSide() {
   var list = jobj.Guide;
@@ -78,11 +142,9 @@ function populateSide() {
 };
 
 function saveProd(id) {
-  if (eleChanged) {
-    var found = false;
-    eleChanged = false;
+    var found = false;   
     var list = jobj.Guide;
-    var ID = (id.id.slice(0, -2) + "R");
+    var ID = id.id.slice(0, -2) + "R";
     var row = document.getElementById(ID);
     for (var i = 0; i < list.length; i++) {
       var listCat = list[i].category;
@@ -95,29 +157,26 @@ function saveProd(id) {
               listProd[j].stockID = children[0].innerHTML;
               listProd[j].title = children[1].innerHTML;
               listProd[j].price = children[2].innerHTML;
-              id.id = (children[0].innerHTML + "SB");
               docChanged = true;
-              document.getElementById("save-btn").className="btn btn-warning";
-              id.className = "save-btn-primary";
+              document.getElementById("save-btn").className="save-btn-warn";
               found = true;
             }
             else if ((j + 1) == listProd.length && !found) {
               listProd.splice(listProd.length, 1, {"stockID" : children[0].innerHTML, 
               "title" : children[1].innerHTML, "price" : children[2].innerHTML});
               docChanged = true;
-              document.getElementById("save-btn").className="btn btn-warning";
-              id.className = "save-btn-primary";
+              document.getElementById("save-btn").className="save-btn-warn";
               found = true;
             }
           }
         }
       }
     }
-  }
 }
 
 function fillProduct(eID) {
     eId = eID;
+    searchBar.placeholder = "Search in " + eID + "...";
     const MAXLINES = 200;
     numLines = 0;
     var list = jobj.Guide;
@@ -133,56 +192,62 @@ function fillProduct(eID) {
                 var stock   = document.createElement('div');
                 var desc    = document.createElement('div');
                 var price   = document.createElement('div');
-                var web     = document.createElement('div');
-                var save    = document.createElement('button');
+                var qty     = document.createElement('div');
+                var web     = document.createElement('button');
+                var edit    = document.createElement('button');
                 var del     = document.createElement('button');
+                var form    = document.createElement('button');
                 web.className  = "web-btn-primary";
-                web.id = (listProd[j].stockID + "WB");
-                save.className = "save-btn-primary";
-                save.id = (listProd[j].stockID + "SB");
+                form.className = "form-btn-primary";
+                web.id = (listProd[j].url);
+                web.onclick = function () {
+                  openAddr(this);
+                };
+                edit.className = "edit-btn-primary";
+                edit.id = (listProd[j].stockID + "EB");
+                form.id = (listProd[j].stockID + "FB");
                 del.id = (listProd[j].stockID + "DB");
                 del.className  = "del-btn-primary";
                 del.onclick = function () {
                   deleteProd(this);
                 };
-                stock.contentEditable = true;
-                desc.contentEditable  = true;
-                price.contentEditable = true;
-                stock.addEventListener("focus", function() {
-                  this.setAttribute("data-initial-text", this.innerHTML);
-                });
-                desc.addEventListener("focus", function() {
-                  this.setAttribute("data-initial-text", this.innerHTML);
-                });
-                price.addEventListener("focus", function() {
-                  this.setAttribute("data-initial-text", this.innerHTML);
-                });
-                stock.addEventListener("blur", setSave);
-                desc.addEventListener("blur", setSave);
-                price.addEventListener("blur", setSave);
+
+                form.onclick = function () {
+                  formControl(this);
+                };
+                
                 if (j % 2 == 0) {
                   prodRow.className = "invBlocklt";
                 }
                 else {
                   prodRow.className = "invBlockdr"
                 }
-                stock.id   = "stckBlck";
-                desc.id    = "descBlck";
-                price.id   = "price";
-                stock.innerHTML = listProd[j].stockID;
-                desc.innerHTML  = listProd[j].title;
-                price.innerHTML = listProd[j].price;
+                stock.className   = "stock";
+                desc.className    = "desc";
+                price.className   = "price";
+                qty.className     = "qty";
+                prodRow.id        = listProd[j].stockID + "R";
+                stock.id          = listProd[j].stockID + "S";
+                desc.id           = listProd[j].stockID + "D";
+                price.id          = listProd[j].stockID + "P";
+                qty.id            = listProd[j].stockID + "Q";
+                stock.innerHTML   = listProd[j].stockID;
+                desc.innerHTML    = listProd[j].title;
+                price.innerHTML   = listProd[j].price;
+                qty.innerHTML     = listProd[j].qty;
                 prodRow.appendChild(stock);
                 prodRow.appendChild(desc);
                 prodRow.appendChild(price);
+                prodRow.appendChild(qty);
                 prodRow.appendChild(del);
-                prodRow.appendChild(save);
+                prodRow.appendChild(edit);
                 prodRow.appendChild(web);
+                prodRow.appendChild(form);
                 mainW.appendChild(prodRow);
                 ++numLines;
-                prodRow.id = (listProd[j].stockID + "R");
-                save.onclick = function () {
-                  saveProd(this);
+                edit.setAttribute("status", false);
+                edit.onclick = function () {
+                  setEdit(this);
                 };
               }
               break;
@@ -206,7 +271,42 @@ function fillProduct(eID) {
 };
 
 function setElem (elem) {
+  elem.className = "active";
   fillProduct(elem.id);
+}
+
+function setEdit (ebtn) { 
+  var status = ebtn.getAttribute("status");
+  var stock  = document.getElementById(ebtn.id.slice(0, -2) + "S");
+  var desc   = document.getElementById(ebtn.id.slice(0, -2) + "D");
+  var price  = document.getElementById(ebtn.id.slice(0, -2) + "P");
+  var qty    = document.getElementById(ebtn.id.slice(0, -2) + "Q");
+  if (status === "false") {
+    ebtn.className = "edit-btn-confirm";
+    ebtn.setAttribute("status", true);
+    stock.contentEditable = true;
+    desc.contentEditable  = true;
+    price.contentEditable = true;
+    qty.contentEditable   = true;
+    stock.setAttribute("orig-content", stock.innerHTML);
+    desc.setAttribute("orig-content", desc.innerHTML);
+    price.setAttribute("orig-content", price.innerHTML);
+    qty.setAttribute("orig-content", qty.innerHTML);
+  }
+  else {
+    ebtn.className = "edit-btn-primary";
+    ebtn.setAttribute("status", false);
+    stock.contentEditable = false;
+    desc.contentEditable  = false;
+    price.contentEditable = false;
+    qty.contentEditable   = false;
+    if (stock.getAttribute("orig-content") !== stock.innerHTML   ||
+        desc.getAttribute("orig-content")  !== desc.innerHTML    ||
+        price.getAttribute("orig-content") !== price.innerHTML   ||
+        qty.getAttribute("orig-content")   !== qty.innerHTML) {
+          saveProd(ebtn);
+      }
+  }
 }
 
 function removeElems (cName) {
@@ -218,11 +318,10 @@ function removeElems (cName) {
 
 function setSave () {
   if (this.getAttribute("data-initial-text") !== this.innerHTML) {
-    var sbn = document.getElementById(this.parentNode.id.slice(0, -1) + "SB");
-    sbn.className = "save-btn-warn";
-    eleChanged = true;
+    saveProd(this);
   }
 }
+
 
 function deleteProd(id) {
     if(confirm("Confirm Delete")) {
@@ -241,11 +340,14 @@ function deleteProd(id) {
                 document.getElementById("save-btn").className="btn btn-warning";
                 document.getElementById(id.id.slice(0, -2) + "R").remove();
                 --numLines;
+                currCat = -1;
+                fillProduct(eId);
               }
               else if ((j + 1) == listProd.length) {
-                alert(row.id);
                 document.getElementById(id.id.slice(0, -2) + "R").remove();
                 --numLines;
+                currCat = -1;
+                fillProduct(eId);
               }
             }
           }
@@ -257,6 +359,7 @@ function deleteProd(id) {
     }
 }
 
+// TODO : FIX AFTER FILLPRODUCT CHANGE
 function addProd() {
   var prodRow = document.getElementById((numLines + "R"));
   var stock   = document.createElement('div');
@@ -271,21 +374,7 @@ function addProd() {
   del.onclick = function () {
     deleteProd(this);
   };
-  stock.contentEditable = true;
-  desc.contentEditable  = true;
-  price.contentEditable = true;
-  stock.addEventListener("focus", function() {
-    this.setAttribute("data-initial-text", this.innerHTML);
-  });
-  desc.addEventListener("focus", function() {
-    this.setAttribute("data-initial-text", this.innerHTML);
-  });
-  price.addEventListener("focus", function() {
-    this.setAttribute("data-initial-text", this.innerHTML);
-  });
-  stock.addEventListener("blur", setSave);
-  desc.addEventListener("blur", setSave);
-  price.addEventListener("blur", setSave);
+
 
   stock.id   = "stckBlck";
   desc.id    = "descBlck";
@@ -299,6 +388,34 @@ function addProd() {
   save.onclick = function () {
     saveProd(this);
   };
+}
+
+function openAddr(bID) {
+};
+
+function formFill() {
+    alert("H");
+    //var stock  = document.getElementById(fb.id.slice(0, -2) + "S");
+    var stockForm = document.getElementById('stockText');
+    document.getElementById("stockText").value = "HI";
+    //stockForm.value = "HELLO";
+}
+function alertWin () {
+  alert("HI");
+};
+
+function formControl (fb) {
+  var rowDiv = document.getElementById((fb.id.slice(0, -2)) + "R");
+  let rowChi = rowDiv.childNodes;
+  rowDiv.className = ("invBlock-exp");
+  let sTitle = document.createElement('div');
+  sTitle.className = "textTitle";
+  sTitle.appendChild(document.createTextNode("StockID"));
+  let sTextArea = document.createElement('textarea');
+  sTextArea.className = "textBox";
+  sTextArea.value = rowChi[0].innerHTML;
+  rowDiv.appendChild(sTitle);
+  rowDiv.appendChild(sTextArea);
 }
 
 

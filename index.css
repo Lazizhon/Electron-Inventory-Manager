@@ -3,11 +3,6 @@ html, body {
     overflow: hidden;
 }
 
-#nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
 .btns {
     margin: 0 0 0 -2px;
@@ -16,60 +11,238 @@ html, body {
 
 #nav {
     margin: 0 10px 30px 0;
-    height: 50px;
-    width: 1340px;
+    height: 30px;
+    width: 1375px;
+    background-color:rgba(255, 255, 255, .6)
 }
 
-#toolbar {
-    margin: 0 10px 30px 0;
-    height: 50px;
-    width: 1340px;
-}
-
-#toolbar ul {
+#nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+#nav li {
+    display: inline;
+}
+
+.open-btn-main {
+    margin: 0 10px 0 10px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.open-btn-main:after {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    color: darkblue;
+    content: "\f115";
+}
+
+.save-btn-main {
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.save-btn-main:after {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    color: gray;
+    content: "\f0c7";
+}
+
+.save-btn-warn {
+    cursor: pointer;
+    margin: 0 10px 0 10px;
+    display: inline;
+    transition-duration: 0.6s;
+    background: transparent;
+}
+
+.save-btn-warn:after {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    color: darkorange;
+    content: "\f0c7";
+}
+
+.add-btn-primary {
+    margin: 0 10px 0 10px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.add-btn-primary:after {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f055";
+}
+
+.print-btn-primary {
+    margin: 0 10px 0 10px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.print-btn-primary:after {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f02f";
+}
+
+.search-bar-primary {
+    display: inline;
+    position: absolute;
+    left: 1125px;
+}
+
+
+.undo-btn-primary {
+    margin: 0 10px 0 10px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.undo-btn-primary:after {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f0e2";
+}
+
+.search-btn-primary {
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+    position: absolute;
+    left: 1100px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.search-btn-primary:after {
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f002";
+}
+
+.close-search-btn-primary {
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+    position: absolute;
+    left: 1102px;
+    top: 20px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.close-search-btn-primary:after {
+    font-family: FontAwesome;
+    color: darkred;
+    content: "\f00d";
+}
+
+.settings-btn-primary {
+    margin: 0 5px 0 5px;
+    display: inline;
+    transition-duration: 0.4s;
+    background: transparent;
+}
+
+.settings-btn-primary:after {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    color: darkblue;
+    content: "\f013";
+}
+
 input[type=text] {
-    float:right;
+    font-size: .8em;
     width: 130px;
     height: 25px;
-    border: 2px solid #ccc;
+    border: 1px solid;
     box-sizing: border-box;
     border-radius: 4px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
     font-family: 'Carrois Gothic', sans-serif;
+    outline: none;
+    border-color: #9ecaed;
 }
 
 input[type=text]:focus {
     width:200px;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
 }
 
-input[type=text]:before {
-    font-family: FontAwesome;
-    color: lightslategray;
-    content: "\f002";
+.textBox {
+    margin: 0 0 15px 25px;
+    border-radius: 3px;
+    border-width: .5px important!;
+}
+
+.textTitle {
+    margin: 5px 0 0 25px;
+    width: 250px;
+    border-radius: 3px;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 1px #9ecaed; 
+}
+
+.textBox:focus {
+    border-radius: 7px;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;   
+}
+
+.slt-mnu {
+    width: 75px;
+    outline: none;
+    border-color: darkblue;
+    box-shadow: 0 0 2px darkblue;   
 }
 
 #sidebar {
-    padding: 20px 0 0 0;
+    padding: 5px 0 0 0;
     display: inline-block;
     height: 800px;
-    margin: 20px 0 0 0;
+    margin: 20px 5px 0 -25px;
     width: 200px;
     float: left;
     border-width: .5px;
+    border-style: solid;
+    border-radius: 7px;
     font-size: 14px;
-    border-style: inset;
     border-color: #dddddd;
 }
 
 .guide {
-    text-align: center;
-    font-family: 'Archivo Black', sans-serif;
+  margin: 0 115px 0 -150px;
+  display: inline-block;
+  width: 30px;
+  height: auto;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 .underline {
@@ -83,46 +256,61 @@ input[type=text]:before {
 
 #mainWin {
     padding: 0;
+    border-radius: 4px;
     display: inline-block;
     height: 1000px;
-    width: 1133px;
+    width: 1185px;
     margin: 0 0 0 0;
     overflow: scroll;
-    border-style: inset;
-    border-width: thin;
+    border-style: solid;
+    border-width: .5px;
     border-color: #dddddd;
 }
 
 .invBlocklt {
+  position: relative
   display: block;
   border: none;
-  width: 1130.5px;
+  width: 1190px;
   height: 30px;
   margin: 0;
-  transition-duration: 0.1s;
   background: #eeeaef;
 }
 
+.invBlock-exp {
+    display: block;
+    border-style: solid;
+    border-width: .5px;
+    border-radius: 7px;
+    width: 1190px;
+    height: 500px;
+    margin: 0;
+    transition-duration: 0.1s;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
 .invBlockdr {
+  position: relative;
   display: block;
   border: none;
-  width: 1130.5px;
+  width: 1190px;
   height: 30px;
   margin: 0;
   transition-duration: 0.1s;
-}
-
-.invBlock:hover {
-    border-style: inset;
-    border-color: blue;
 }
 
 .col {
   margin: 0 70px 0 15px;
   display: inline-block;
-  width: 30px;
+  width: 75px;
   height: auto;
   font-family: 'Archivo Black', sans-serif;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 3px #9ecaed;   
 }
 
 .prc {
@@ -134,7 +322,7 @@ input[type=text]:before {
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+    width: .5px;
 }
 
 
@@ -161,30 +349,59 @@ input[type=text]:before {
 
 .prod li{
   cursor: pointer;
+  text-decoration: none;
+
 }
 
-#stckBlck {
+.prod li:hover {
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    border-radius: 1px;
+    outline: none;
+    border-color: gray;
+    box-shadow: 0 0 2px gray;
+}
+
+.active {
+    background-color: darkblue;
+}
+
+.stock {
   display: inline-block;
   margin: 5px 25px 0 20px;
   width: 75px;
   box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
   }
 
-  #descBlck {
+  .desc {
   display: inline-block;
   margin: 5px 45px 0 10px;
   box-sizing: border-box;
   width: 625px;
+  white-space: nowrap;
+  overflow: hidden;
   }
 
-#price {
+.price {
   display: inline-block;
-  margin: 5px 45px 0 50px;
-  width: 50px;
+  margin: 5px -20px 0 50px;
+  width: 65px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.qty {
+  display: inline-block;
+  margin: 5px -45px 0 50px;
+  width: 30px;
   box-sizing: border-box;
 }
 
-.save-btn-primary {
+.edit-btn-primary {
     float: right;
     display: inline-block;
     text-decoration: none;
@@ -194,16 +411,15 @@ input[type=text]:before {
     margin: 0;
     transition-duration: 0.4s;
     background: transparent;
-    pointer-events: none;
 }
 
-.save-btn-primary:after {
+.edit-btn-primary:after {
     font-family: FontAwesome;
     color: blue;
     content: "\f044";
 }
 
-.save-btn-warn {
+.edit-btn-confirm {
     float: right;
     display: inline-block;
     text-decoration: none;
@@ -215,7 +431,7 @@ input[type=text]:before {
     transition-duration: 0.4s;
 }
 
-.save-btn-warn:after {
+.edit-btn-confirm:after {
     font-family: FontAwesome;
     color: green;
     content: "\f00c";
@@ -236,7 +452,7 @@ input[type=text]:before {
 
 .del-btn-primary:after {
     font-family: FontAwesome;
-    color: red;
+    color: darkred;
     content: "\f014";
 }
 
@@ -251,6 +467,7 @@ input[type=text]:before {
     margin: 0;
     background: transparent;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .web-btn-primary:after {
@@ -259,22 +476,32 @@ input[type=text]:before {
     content: "\f00e";
 }
 
-.search-btn-primary {
+.form-btn-primary {
     float: right;
-    cursor: pointer;
     display: inline-block;
     text-decoration: none;
     border-width: 0;
     text-decoration: none;
     width: 30px !important;
     height: 100%;
-    margin: 0 0 0 10px;
+    margin: 0;
     background: transparent;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
-.search-btn-primary:after {
+.form-btn-primary:after {
     font-family: FontAwesome;
     color: gray;
-    content: "\f002";
+    content: "\f0ce";
+}
+
+
+.tDiv {
+    background-color: red;
+}
+
+.highlight {
+    background-color:darkblue;
+    color: white;
 }
