@@ -265,6 +265,9 @@ input[type=text]:focus {
     border-style: solid;
     border-width: .5px;
     border-color: #dddddd;
+    position: fixed;
+    top: 80px;
+    left: 180px;
 }
 
 .invBlocklt {
@@ -353,7 +356,25 @@ input[type=text]:focus {
 
 }
 
+#cats {
+    
+}
+
+#cats-hidden {
+    display: none;
+}
+
 .prod li:hover {
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    border-radius: 1px;
+    outline: none;
+    border-color: gray;
+    box-shadow: 0 0 2px gray;
+}
+
+.prod li:active {
     background-color: darkred;
     color: white;
     text-decoration: none;

@@ -45,6 +45,16 @@ searchBar.addEventListener("keypress", function(e) {
   }
 })
 
+document.getElementById("settings-btn").addEventListener("click", function(e) {
+  var shown = document.getElementById("cats");
+  if (shown) {
+    shown.id = "cats-hidden";
+  }
+  else {
+    document.getElementById("cats-hidden").id = "cats";
+  }
+});
+
 document.getElementById("close-search-btn").addEventListener("click", function(e) {
   searchBar.value = null;
   removeHighlight();
@@ -86,9 +96,7 @@ document.getElementById("save-btn").addEventListener("click", function (e) {
     else {
       window.close();
     }
-});*/
-
-                
+});*/             
 
 
 function removeHighlight () {
@@ -140,6 +148,24 @@ function populateSide() {
     cat.appendChild(li);
   }
 };
+
+var selector, elems, makeActive;
+selector = (".prod li");
+
+elems = document.querySelectorAll(selector);
+alert(elems[0].innerHTML);
+makeActive = function () {
+    alert("HI");
+    for (var i = 0; i < elems.length; i++)
+        elems[i].className = "active";
+        alert(elems[i]);
+
+    this.className = "active";
+};
+
+for (var i = 0; i < elems.length; i++)
+    elems[i].addEventListener('mousedown', makeActive);
+
 
 function saveProd(id) {
     var found = false;   
