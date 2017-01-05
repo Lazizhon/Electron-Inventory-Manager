@@ -10,7 +10,7 @@ html, body {
 }
 
 #nav {
-    margin: 0 10px 30px 0;
+    margin: 0 10px 10px 0;
     height: 45px;
     width: 1375px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -38,7 +38,7 @@ html, body {
     display: inline-block;
     font-family: FontAwesome;
     font-size: 1.5em;
-    color: white;
+    color: ghostwhite;
     content: "\f115";
 }
 
@@ -54,7 +54,7 @@ html, body {
     display: inline-block;
     font-family: FontAwesome;
     font-size: 1.5em;
-    color: white;
+    color: ghostwhite;
     content: "\f0c7";
 }
 
@@ -85,7 +85,7 @@ html, body {
     display: inline-block;
     font-size: 1.5em;
     font-family: FontAwesome;
-    color: white;
+    color: ghostwhite;
     content: "\f055";
 }
 
@@ -100,7 +100,7 @@ html, body {
     display: inline-block;
     font-size: 1.5em;
     font-family: FontAwesome;
-    color: white;
+    color: ghostwhite;
     content: "\f02f";
 }
 
@@ -115,7 +115,7 @@ html, body {
     display: inline-block;
     font-size: 1.5em;
     font-family: FontAwesome;
-    color: white;
+    color: ghostwhite;
     content: "\f0e2";
 }
 
@@ -131,7 +131,7 @@ html, body {
 
 .search-btn-primary:after {
     font-family: FontAwesome;
-    color: white;
+    color: ghostwhite;
     content: "\f002";
 }
 
@@ -163,7 +163,7 @@ html, body {
     display: inline-block;
     font-size: 1.5em;
     font-family: FontAwesome;
-    color: darkblue;
+    color: ghostwhite;
     content: "\f013";
 }
 
@@ -274,10 +274,10 @@ html, body {
 }
 
 #sidebar {
-    padding: 5px 0 0 0;
+    padding: 35px 0 0 0;
     display: inline-block;
     height: 800px;
-    margin: -32px 5px 0 -25px;
+    margin: -32px 0 0 -25px;
     width: 200px;
     float: left;
     border-width: .5px;
@@ -304,13 +304,13 @@ html, body {
     list-style-type: none;
     font-family: 'Carrois Gothic', sans-serif;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    color: white;
+    color: ghostwhite;
 }
 
 #sidebar li {
     font-family: 'Carrois Gothic', sans-serif;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    color: white;
+    color: ghostwhite;
 }
 
 #mainWin {
@@ -365,7 +365,7 @@ html, body {
 }
 
 .col {
-  margin: 0 70px 0 15px;
+  margin: -50px 25px 0 20px;
   display: inline-block;
   width: 75px;
   height: auto;
@@ -373,7 +373,7 @@ html, body {
 }
 
 .prc {
-  margin: 0 25px 0 525px;
+  margin: 0 25px 0 610px;
   display: inline-block;
   width: 30px;
   height: auto;
@@ -430,13 +430,24 @@ html, body {
 
 #prod li:hover {
     background-color: darkred;
-    color: white;
+    color: ghostwhite;
     text-decoration: none;
     border-radius: 1px;
     outline: none;
     border-color: gray;
     box-shadow: 0 0 2px gray;
-    transition-duration: 0.7s;
+    transition-duration: 0.3s;
+}
+
+#prod ul:hover {
+    background-color: darkred;
+    color: ghostwhite;
+    text-decoration: none;
+    border-radius: 1px;
+    outline: none;
+    border-color: gray;
+    box-shadow: 0 0 2px gray;
+    transition-duration: 0.3s;
 }
 
 .stop-scrolling {
@@ -460,7 +471,7 @@ html, body {
 
 .active {
     background-color: darkred;
-    color: white;
+    color: ghostwhite;
     text-decoration: none;
     border-radius: 1px;
     outline: none;
@@ -506,7 +517,7 @@ html, body {
   margin: 5px -20px 0 50px;
   width: 65px;
   box-sizing: border-box;
-  white-space: nowrap;
+  ghostwhite-space: nowrap;
   overflow: hidden;
 }
 
@@ -598,7 +609,7 @@ html, body {
 
 .highlight-row {
     background-color:darkblue;
-    color: white;
+    color: ghostwhite;
     transition-duration: 0.9s;
     position: relative
     display: block;
@@ -618,5 +629,5 @@ html, body {
     margin: 0;
     background: transparent;
     transition-duration: 0.4s;
-    color: white !important;
+    color: ghostwhite !important;
 }
