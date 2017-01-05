@@ -13,7 +13,7 @@ html, body {
     margin: 0 10px 30px 0;
     height: 30px;
     width: 1375px;
-    background-color:rgba(255, 255, 255, .6)
+    background-color:rgba(255, 255, 255, .1)
 }
 
 #nav ul {
@@ -103,13 +103,6 @@ html, body {
     content: "\f02f";
 }
 
-.search-bar-primary {
-    display: inline;
-    position: absolute;
-    left: 1125px;
-}
-
-
 .undo-btn-primary {
     margin: 0 10px 0 10px;
     display: inline;
@@ -131,7 +124,7 @@ html, body {
     position: absolute;
     left: 1100px;
     display: inline;
-    transition-duration: 0.4s;
+    transition-duration: 0.1s;
     background: transparent;
 }
 
@@ -173,43 +166,99 @@ html, body {
     content: "\f013";
 }
 
-input[type=text] {
+.search-bar-primary {
+    display: inline;
+    position: absolute;
+    left: 1125px;
     font-size: .8em;
     width: 130px;
     height: 25px;
     border: 1px solid;
     box-sizing: border-box;
     border-radius: 4px;
-    -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
     font-family: 'Carrois Gothic', sans-serif;
     outline: none;
     border-color: #9ecaed;
+    transition: border-color 0.7s ease;
 }
 
-input[type=text]:focus {
+.search-bar-primary:focus {
     width:200px;
+    transition: width 0.4s ease-in-out;
+    border-radius: 7px;
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
 }
 
-.textBox {
-    margin: 0 0 15px 25px;
+.search-bar-err {
+    display: inline;
+    position: absolute;
+    left: 1125px;
+    font-size: .8em;
+    height: 25px;
+    border: 1px solid;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border-color 0.7s ease;
+    font-family: 'Carrois Gothic', sans-serif;
+    width:200px;
+    border-radius: 7px;
+    outline: none;
+    border-color:darkred;
+    box-shadow: 0 0 10px darkred;
+}
+
+.form-row {
+    display: block;
+    float: left;
+}
+
+.form-row-large {
+    display: block;
+    float: left;
+    width: auto;
+    height: auto;
+}
+
+.textTitle-small {
+    margin: 5px 0 0 25px;
+    width: 30px;
+    height: 15px;
+}
+
+.textBox-small {
+    margin: 5px 0 30px 25px;
+    width: 100px;
+    height: 20px;
     border-radius: 3px;
     border-width: .5px important!;
 }
 
-.textTitle {
-    margin: 5px 0 0 25px;
-    width: 250px;
-    border-radius: 3px;
+
+.textBox-small:focus {
+    border-radius: 7px;
     outline: none;
     border-color: #9ecaed;
-    box-shadow: 0 0 1px #9ecaed; 
+    box-shadow: 0 0 10px #9ecaed;   
 }
 
-.textBox:focus {
+.textTitle-large {
+    margin: 0 0 15px 10px;
+    width: 100px;
+    height: 15px;
+}
+
+.textBox-large {
+    margin: 5px 0 15px 25px;
+    width: 1000px;
+    height: 75px;
+    border-radius: 3px;
+    border-width: .5px important!;
+}
+
+.textBox-large:focus {
     border-radius: 7px;
     outline: none;
     border-color: #9ecaed;
@@ -271,6 +320,7 @@ input[type=text]:focus {
 }
 
 .invBlocklt {
+  transition-duration: 0.5s;
   position: relative
   display: block;
   border: none;
@@ -281,6 +331,7 @@ input[type=text]:focus {
 }
 
 .invBlock-exp {
+    background: #dddddd;
     display: block;
     border-style: solid;
     border-width: .5px;
@@ -288,7 +339,7 @@ input[type=text]:focus {
     width: 1190px;
     height: 500px;
     margin: 0;
-    transition-duration: 0.1s;
+    transition-duration: 0.5s;
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
@@ -350,21 +401,29 @@ input[type=text]:focus {
 #cat {
 }
 
-.prod li{
+#prod li{
   cursor: pointer;
   text-decoration: none;
 
 }
 
 #cats {
-    
+    opacity: 1;
+    transition: opacity 0.4s transition;
+    -ms-transition: opacity 0.4s transition;
+    -moz-transition: opacity 0.4s transition;
+    -webkit-transition: opacity 0.4s transition;
 }
 
 #cats-hidden {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    -ms-transition: opacity 0.4s ease-in;
+    -moz-transition: opacity 0.4s ease-in;
+    -webkit-transition: opacity 0.4s ease-in;
 }
 
-.prod li:hover {
+#prod li:hover {
     background-color: darkred;
     color: white;
     text-decoration: none;
@@ -372,20 +431,36 @@ input[type=text]:focus {
     outline: none;
     border-color: gray;
     box-shadow: 0 0 2px gray;
+    transition-duration: 0.7s;
 }
 
-.prod li:active {
-    background-color: darkred;
-    color: white;
-    text-decoration: none;
-    border-radius: 1px;
-    outline: none;
-    border-color: gray;
-    box-shadow: 0 0 2px gray;
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+#prod a {
+    text-decoration: none; 
+}
+
+#prod li:active {
+    transition-duration: 0.3s;
+}
+
+.normal {
+  cursor: pointer;
+  text-decoration: none;
+  transition-duration: 0.3s;
 }
 
 .active {
-    background-color: darkblue;
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    border-radius: 1px;
+    outline: none;
+    border-color: gray;
+    box-shadow: 0 0 2px gray;
 }
 
 .stock {
@@ -432,12 +507,7 @@ input[type=text]:focus {
     margin: 0;
     transition-duration: 0.4s;
     background: transparent;
-}
-
-.edit-btn-primary:after {
-    font-family: FontAwesome;
-    color: blue;
-    content: "\f044";
+    color: lightblue;
 }
 
 .edit-btn-confirm {
@@ -450,12 +520,7 @@ input[type=text]:focus {
     margin: 0;
     background: transparent;
     transition-duration: 0.4s;
-}
-
-.edit-btn-confirm:after {
-    font-family: FontAwesome;
-    color: green;
-    content: "\f00c";
+    color: green;    
 }
 
 .del-btn-primary {
@@ -469,12 +534,7 @@ input[type=text]:focus {
     margin: 0;
     background: transparent;
     transition-duration: 0.4s;
-}
-
-.del-btn-primary:after {
-    font-family: FontAwesome;
-    color: darkred;
-    content: "\f014";
+    color: red;
 }
 
 .web-btn-primary {
@@ -489,12 +549,7 @@ input[type=text]:focus {
     background: transparent;
     transition-duration: 0.4s;
     cursor: pointer;
-}
-
-.web-btn-primary:after {
-    font-family: FontAwesome;
-    color: gray;
-    content: "\f00e";
+    color: purple;
 }
 
 .form-btn-primary {
@@ -509,20 +564,34 @@ input[type=text]:focus {
     background: transparent;
     transition-duration: 0.4s;
     cursor: pointer;
+    color: orange;
 }
-
-.form-btn-primary:after {
-    font-family: FontAwesome;
-    color: gray;
-    content: "\f0ce";
-}
-
 
 .tDiv {
     background-color: red;
 }
 
-.highlight {
+.highlight-row {
     background-color:darkblue;
     color: white;
+    transition-duration: 0.9s;
+    position: relative
+    display: block;
+    border: none;
+    width: 1190px;
+    height: 30px;
+    margin: 0;
+}
+
+.highlight-icon {
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+    border-width: 0;
+    width: 30px !important;
+    height: 100%;
+    margin: 0;
+    background: transparent;
+    transition-duration: 0.4s;
+    color: white !important;
 }
