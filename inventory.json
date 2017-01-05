@@ -15,7 +15,7 @@
               "url": "",
               "make": "chevy/gmc",
               "inStock": "",
-              "notes": ""
+              "notes": "This item is on hold"
             },
             {
               "price": "$49.99",
@@ -2879,7 +2879,7 @@
               "oprice": "99.99",
               "price": "49.99",
               "stockID": "*AVS45718C",
-              "title": "08-10 Ford F-250/F-350 Super Duty AVS Bugflector II Deluxe 3-Piece Bug Shield",
+              "title": "08-10 Ford F-250/F-350 Super Duty AVS Bugflector II Deluxe 3-Piece Bug Shields",
               "location": "A20D",
               "type": "",
               "make": "",

@@ -35,15 +35,31 @@ if (!loaded) {
 });
 searchBar.addEventListener("blur", removeHighlight);   
 
-
 searchBar.addEventListener("keypress", function(e) {
   if (e.keyCode === 13) {
     if (targRow)
       targRow.className = trPrevClass;
     searchVal = searchBar.value;
-    search();
+    if (search() === false) {
+      searchBar.className = "search-bar-err";
+      setTimeout(clearWarn, 2000);
+    }
   }
 })
+
+function clearWarn(elem) {
+  searchBar.className = "search-bar-primary";
+}
+
+document.getElementById("settings-btn").addEventListener("click", function(e) {
+  var shown = document.getElementById("cats");
+  if (shown) {
+    shown.id = "cats-hidden";
+  }
+  else {
+    document.getElementById("cats-hidden").id = "cats";
+  }
+});
 
 document.getElementById("close-search-btn").addEventListener("click", function(e) {
   searchBar.value = null;
@@ -51,7 +67,10 @@ document.getElementById("close-search-btn").addEventListener("click", function(e
 });
 
   document.getElementById("search-btn").addEventListener("click", function(e) {
-  search();
+    if (search() === false) {
+      searchBar.className = "search-bar-err";
+      searchBar.className = "search-bar-primary";
+    }
 });
 
 document.getElementById("add-btn").addEventListener("click", function(e) {
@@ -86,24 +105,36 @@ document.getElementById("save-btn").addEventListener("click", function (e) {
     else {
       window.close();
     }
-});*/
-
-                
+});*/             
 
 
 function removeHighlight () {
-  if(this.value !== searchVal)
+  if(this.value !== searchVal) {
     targRow.className = trPrevClass;
+    var targChildren = targRow.childNodes;
+    for (var i = 4; i < targChildren.length; i++) {
+      targChildren[i].removeAttribute("style");
+    }
+  }
 }
 
 
 
 function search () {
   if (searchBar.value) {
+    let found = false;
     targRow = document.getElementById((searchBar.value + "R").toUpperCase());
-    trPrevClass = targRow.className;
-    //targRow.scrollTo();
-    targRow.className = "highlight";
+    if (targRow !== null) {
+      trPrevClass = targRow.className;
+      targRow.className = "highlight-row";
+      for (var i = 4; i < targRow.childNodes.length; i++) {
+        targRow.childNodes[i].style.color = "white";
+      }
+      found = true;
+    }
+    else {
+    }
+    return found;
   }
 };
 
@@ -124,7 +155,7 @@ function populateSide() {
     var li = document.createElement('li');
     li.appendChild(document.createTextNode(listGuide.title));
     var ul = document.createElement('ul');
-    ul.className = "prod";
+    ul.id = "prod";
     for (var k = 0; k < listCat.length; k++) {
       var a = document.createElement('a');
       a.id = listCat[k].name;
@@ -193,13 +224,30 @@ function fillProduct(eID) {
                 var desc    = document.createElement('div');
                 var price   = document.createElement('div');
                 var qty     = document.createElement('div');
+                
                 var web     = document.createElement('button');
                 var edit    = document.createElement('button');
                 var del     = document.createElement('button');
                 var form    = document.createElement('button');
+                
+                var fIcon   = document.createElement('i');
+                var wIcon   = document.createElement('i');
+                var eIcon   = document.createElement('i');
+                var dIcon   = document.createElement('i');
+                
+                fIcon.className = "fa fa-plus-square";
+                wIcon.className = "fa fa-external-link";
+                eIcon.className = "fa fa-pencil-square";
+                dIcon.className = "fa fa-times";
+
+                form.appendChild(fIcon);
+                web.appendChild(wIcon);
+                edit.appendChild(eIcon);
+                del.appendChild(dIcon);
+
                 web.className  = "web-btn-primary";
                 form.className = "form-btn-primary";
-                web.id = (listProd[j].url);
+                web.id = (listProd[j].stockID + "WB");
                 web.onclick = function () {
                   openAddr(this);
                 };
@@ -244,6 +292,7 @@ function fillProduct(eID) {
                 prodRow.appendChild(web);
                 prodRow.appendChild(form);
                 mainW.appendChild(prodRow);
+                prodRow.setAttribute("notes", listProd[j].notes);
                 ++numLines;
                 edit.setAttribute("status", false);
                 edit.onclick = function () {
@@ -271,8 +320,20 @@ function fillProduct(eID) {
 };
 
 function setElem (elem) {
-  elem.className = "active";
+  removeActive();
+  setActive(elem);
   fillProduct(elem.id);
+}
+
+function removeActive () {
+  let active = document.getElementsByClassName('active');
+  for (let i = 0; i < active.length; i++) {
+    active[i].className = "normal";
+  }
+}
+
+function setActive (elem) {
+  elem.childNodes[0].className = "active";
 }
 
 function setEdit (ebtn) { 
@@ -283,6 +344,7 @@ function setEdit (ebtn) {
   var qty    = document.getElementById(ebtn.id.slice(0, -2) + "Q");
   if (status === "false") {
     ebtn.className = "edit-btn-confirm";
+    ebtn.childNodes[0].className = "fa fa-check-square";
     ebtn.setAttribute("status", true);
     stock.contentEditable = true;
     desc.contentEditable  = true;
@@ -295,6 +357,7 @@ function setEdit (ebtn) {
   }
   else {
     ebtn.className = "edit-btn-primary";
+    ebtn.childNodes[0].className = "fa fa-pencil-square";
     ebtn.setAttribute("status", false);
     stock.contentEditable = false;
     desc.contentEditable  = false;
@@ -393,29 +456,95 @@ function addProd() {
 function openAddr(bID) {
 };
 
-function formFill() {
-    alert("H");
-    //var stock  = document.getElementById(fb.id.slice(0, -2) + "S");
-    var stockForm = document.getElementById('stockText');
-    document.getElementById("stockText").value = "HI";
-    //stockForm.value = "HELLO";
-}
-function alertWin () {
-  alert("HI");
-};
-
 function formControl (fb) {
   var rowDiv = document.getElementById((fb.id.slice(0, -2)) + "R");
   let rowChi = rowDiv.childNodes;
   rowDiv.className = ("invBlock-exp");
+  
   let sTitle = document.createElement('div');
-  sTitle.className = "textTitle";
+  sTitle.className = "textTitle-small";
   sTitle.appendChild(document.createTextNode("StockID"));
   let sTextArea = document.createElement('textarea');
-  sTextArea.className = "textBox";
+  sTextArea.className = "textBox-small";
   sTextArea.value = rowChi[0].innerHTML;
-  rowDiv.appendChild(sTitle);
-  rowDiv.appendChild(sTextArea);
+
+  let pTitle = document.createElement('div');
+  pTitle.className = "textTitle-small";
+  pTitle.appendChild(document.createTextNode("Price"));
+  let pTextArea = document.createElement('textarea');
+  pTextArea.className = "textBox-small";
+  pTextArea.value = rowChi[2].innerHTML;
+
+  let qTitle = document.createElement('div');
+  qTitle.className = "textTitle-small";
+  qTitle.appendChild(document.createTextNode("Quantity"));
+  let qTextArea = document.createElement('textarea');
+  qTextArea.className = "textBox-small";
+  qTextArea.value = rowChi[3].innerHTML;
+
+  let dTitle = document.createElement('div');
+  dTitle.className = "textTitle-large";
+  dTitle.appendChild(document.createTextNode("Description"));
+  let dTextArea = document.createElement('textarea');
+  dTextArea.className = "textBox-large";
+  dTextArea.value = rowChi[1].innerHTML;
+
+  let nTitle = document.createElement('div');
+  nTitle.className = "textTitle-large";
+  nTitle.appendChild(document.createTextNode("Notes"));
+  let nTextArea = document.createElement('textarea');
+  nTextArea.className = "textBox-large";
+  nTextArea.value = rowDiv.getAttribute("notes");
+  
+  let f_container = document.createElement('div');
+  let s_container = document.createElement('div');
+  let t_container = document.createElement('div');
+  f_container.className = "form-row";
+  s_container.className = "form-row";
+  t_container.className = "form-row";
+
+  let fr_container = document.createElement('div');
+  let ft_container = document.createElement('div');
+  fr_container.className = "form-row-large";
+  ft_container.className = "form-row-large";
+  
+  
+  f_container.appendChild(sTitle);
+  f_container.appendChild(sTextArea);
+  s_container.appendChild(pTitle);
+  s_container.appendChild(pTextArea);
+  t_container.appendChild(qTitle);
+  t_container.appendChild(qTextArea); 
+  fr_container.appendChild(dTitle);
+  fr_container.appendChild(dTextArea);
+  ft_container.appendChild(nTitle);
+  ft_container.appendChild(nTextArea);
+  rowDiv.appendChild(f_container);
+  rowDiv.appendChild(s_container);
+  rowDiv.appendChild(t_container);
+  rowDiv.appendChild(fr_container);
+  rowDiv.appendChild(ft_container);
+  destroyDesc (fb.id.slice(0, -2));
+}
+
+// TODO: USE FOR-LOOP
+function destroyDesc (id) {
+  var stock = document.getElementById(id + "S");
+  var desc  = document.getElementById(id + "D");
+  var price = document.getElementById(id + "P");
+  var qty   = document.getElementById(id + "Q");
+  var form  = document.getElementById(id + "FB");
+  var web   = document.getElementById(id + "WB");
+  var edit  = document.getElementById(id + "EB");
+  var del   = document.getElementById(id + "DB");
+  stock.parentNode.removeChild(stock);
+  desc.parentNode.removeChild(desc);
+  price.parentNode.removeChild(price);
+  qty.parentNode.removeChild(qty);
+  form.parentNode.removeChild(form);
+  web.parentNode.removeChild(web);
+  edit.parentNode.removeChild(edit);
+  del.parentNode.removeChild(del);
 }
 
 
