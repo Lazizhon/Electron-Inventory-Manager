@@ -109,8 +109,13 @@ document.getElementById("save-btn").addEventListener("click", function (e) {
 
 
 function removeHighlight () {
-  if(this.value !== searchVal)
+  if(this.value !== searchVal) {
     targRow.className = trPrevClass;
+    var targChildren = targRow.childNodes;
+    for (var i = 4; i < targChildren.length; i++) {
+      targChildren[i].removeAttribute("style");
+    }
+  }
 }
 
 
@@ -225,20 +230,20 @@ function fillProduct(eID) {
                 var del     = document.createElement('button');
                 var form    = document.createElement('button');
                 
+                var fIcon   = document.createElement('i');
                 var wIcon   = document.createElement('i');
                 var eIcon   = document.createElement('i');
                 var dIcon   = document.createElement('i');
-                var fIcon   = document.createElement('i');
                 
-                wIcon.className = "fa fa-cloud";
-                eIcon.className = "fa fa-check";
-                dIcon.className = "fa fa-cloud";
-                fIcon.className = "fa fa-cloud";
+                fIcon.className = "fa fa-plus-square";
+                wIcon.className = "fa fa-external-link";
+                eIcon.className = "fa fa-pencil-square";
+                dIcon.className = "fa fa-times";
 
-                web.appendChild(wIcon);
-                edit.appendChild(dIcon);
-                del.appendChild(eIcon);
                 form.appendChild(fIcon);
+                web.appendChild(wIcon);
+                edit.appendChild(eIcon);
+                del.appendChild(dIcon);
 
                 web.className  = "web-btn-primary";
                 form.className = "form-btn-primary";
@@ -339,6 +344,7 @@ function setEdit (ebtn) {
   var qty    = document.getElementById(ebtn.id.slice(0, -2) + "Q");
   if (status === "false") {
     ebtn.className = "edit-btn-confirm";
+    ebtn.childNodes[0].className = "fa fa-check-square";
     ebtn.setAttribute("status", true);
     stock.contentEditable = true;
     desc.contentEditable  = true;
@@ -351,6 +357,7 @@ function setEdit (ebtn) {
   }
   else {
     ebtn.className = "edit-btn-primary";
+    ebtn.childNodes[0].className = "fa fa-pencil-square";
     ebtn.setAttribute("status", false);
     stock.contentEditable = false;
     desc.contentEditable  = false;

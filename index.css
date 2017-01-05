@@ -11,9 +11,10 @@ html, body {
 
 #nav {
     margin: 0 10px 30px 0;
-    height: 30px;
+    height: 45px;
     width: 1375px;
-    background-color:rgba(255, 255, 255, .1)
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(midnightblue, midnightblue);
 }
 
 #nav ul {
@@ -37,7 +38,7 @@ html, body {
     display: inline-block;
     font-family: FontAwesome;
     font-size: 1.5em;
-    color: darkblue;
+    color: white;
     content: "\f115";
 }
 
@@ -53,7 +54,7 @@ html, body {
     display: inline-block;
     font-family: FontAwesome;
     font-size: 1.5em;
-    color: gray;
+    color: white;
     content: "\f0c7";
 }
 
@@ -84,7 +85,7 @@ html, body {
     display: inline-block;
     font-size: 1.5em;
     font-family: FontAwesome;
-    color: darkblue;
+    color: white;
     content: "\f055";
 }
 
@@ -99,7 +100,7 @@ html, body {
     display: inline-block;
     font-size: 1.5em;
     font-family: FontAwesome;
-    color: darkblue;
+    color: white;
     content: "\f02f";
 }
 
@@ -114,7 +115,7 @@ html, body {
     display: inline-block;
     font-size: 1.5em;
     font-family: FontAwesome;
-    color: darkblue;
+    color: white;
     content: "\f0e2";
 }
 
@@ -130,7 +131,7 @@ html, body {
 
 .search-btn-primary:after {
     font-family: FontAwesome;
-    color: darkblue;
+    color: white;
     content: "\f002";
 }
 
@@ -206,8 +207,8 @@ html, body {
     width:200px;
     border-radius: 7px;
     outline: none;
-    border-color:darkred;
-    box-shadow: 0 0 10px darkred;
+    border-color:orange;
+    box-shadow: 0 0 10px orange;
 }
 
 .form-row {
@@ -276,14 +277,15 @@ html, body {
     padding: 5px 0 0 0;
     display: inline-block;
     height: 800px;
-    margin: 20px 5px 0 -25px;
+    margin: -32px 5px 0 -25px;
     width: 200px;
     float: left;
     border-width: .5px;
     border-style: solid;
-    border-radius: 7px;
     font-size: 14px;
-    border-color: #dddddd;
+    border-color: midnightblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(midnightblue, midnightblue);
 }
 
 .guide {
@@ -301,6 +303,14 @@ html, body {
 #sidebar ul {
     list-style-type: none;
     font-family: 'Carrois Gothic', sans-serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    color: white;
+}
+
+#sidebar li {
+    font-family: 'Carrois Gothic', sans-serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    color: white;
 }
 
 #mainWin {
@@ -331,7 +341,6 @@ html, body {
 }
 
 .invBlock-exp {
-    background: #dddddd;
     display: block;
     border-style: solid;
     border-width: .5px;
@@ -361,14 +370,10 @@ html, body {
   width: 75px;
   height: auto;
   font-family: 'Archivo Black', sans-serif;
-  border-radius: 3px;
-  outline: none;
-  border-color: #9ecaed;
-  box-shadow: 0 0 3px #9ecaed;   
 }
 
 .prc {
-  margin: 0 25px 0 615px;
+  margin: 0 25px 0 525px;
   display: inline-block;
   width: 30px;
   height: auto;
@@ -462,8 +467,23 @@ html, body {
     border-color: gray;
     box-shadow: 0 0 2px gray;
 }
+[contenteditable="true"]:focus{
+    border:none;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 15px #9ecaed;
+}
 
 .stock {
+  display: inline-block;
+  margin: 5px 25px 0 20px;
+  width: 75px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  }
+
+  .stock:focus {
   display: inline-block;
   margin: 5px 25px 0 20px;
   width: 75px;
@@ -507,7 +527,8 @@ html, body {
     margin: 0;
     transition-duration: 0.4s;
     background: transparent;
-    color: lightblue;
+    color: dodgerblue;
+    outline: none;
 }
 
 .edit-btn-confirm {
@@ -520,7 +541,8 @@ html, body {
     margin: 0;
     background: transparent;
     transition-duration: 0.4s;
-    color: green;    
+    color: green;
+    outline: none;    
 }
 
 .del-btn-primary {
@@ -535,6 +557,7 @@ html, body {
     background: transparent;
     transition-duration: 0.4s;
     color: red;
+    outline: none;
 }
 
 .web-btn-primary {
@@ -550,6 +573,7 @@ html, body {
     transition-duration: 0.4s;
     cursor: pointer;
     color: purple;
+    outline: none;
 }
 
 .form-btn-primary {
@@ -565,6 +589,7 @@ html, body {
     transition-duration: 0.4s;
     cursor: pointer;
     color: orange;
+    outline: none;
 }
 
 .tDiv {
