@@ -354,10 +354,10 @@ html, body {
     width: 1200px;
     height: 500px;
     margin: 0 0 0 -5px;
-    transition-duration: 0.5s;
+    transition: height 0.3s ease-in-out;
     outline: none;
     border-color: #003399;
-    box-shadow: 0 0 10px #003399;
+    box-shadow: 0 0 15px #003399;
     background: #eeeaef;
 }
 
@@ -368,7 +368,7 @@ html, body {
   width: 1190px;
   height: 30px;
   margin: 0;
-  transition-duration: 0.1s;
+  transition-duration: 0.4s;
 }
 
 .col {
@@ -473,6 +473,7 @@ html, body {
 }
 
 .active-prodCat {
+    margin: 15px 0 0 0;
     background-color: #003399;
     color: ghostwhite !important;
     text-decoration: none;
@@ -480,6 +481,10 @@ html, body {
     outline: none;
     border-color: #003399;
     box-shadow: 0 0 2px #003399;
+}
+
+.prodCat {
+    margin: 15px 0 0 0;
 }
 
 .active-prod {
@@ -654,6 +659,7 @@ html, body {
     margin: 5px 20px 0 0;
     color: midnightblue;
     font-size: 1.4em;
+    transition: color 0.5s ease-in-out;
 }
 
 #form-clos-btn {
@@ -667,4 +673,5 @@ html, body {
     margin: 5px 20px 0 0;
     color: orangered;
     font-size: 1.4em;
+    transition: color 0.5s ease-in-out;
 }
