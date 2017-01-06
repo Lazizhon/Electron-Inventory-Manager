@@ -338,7 +338,7 @@ html, body {
 
 .invBlocklt {
   transition-duration: 0.5s;
-  position: relative
+  position: relative;
   display: block;
   border: none;
   width: 1190px;
@@ -356,9 +356,9 @@ html, body {
     margin: 0 0 0 -5px;
     transition-duration: 0.5s;
     outline: none;
-    border-color: darkslategray;;
-    box-shadow: 0 0 10px darkslategray;;
-    background: darkslategray;
+    border-color: #003399;
+    box-shadow: 0 0 10px #003399;
+    background: #eeeaef;
 }
 
 .invBlockdr {
@@ -643,4 +643,28 @@ html, body {
     background: transparent;
     transition-duration: 0.4s;
     color: ghostwhite !important;
+}
+
+.form-icons {
+    float: right;
+    margin: 0 25px 0 0;
+}
+
+#form-save-btn-disabled {
+    margin: 5px 20px 0 0;
+    color: midnightblue;
+    font-size: 1.4em;
+}
+
+#form-clos-btn {
+    margin: 5px -15px 0 0;
+    color: firebrick;
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+#form-save-btn-enabled {
+    margin: 5px 20px 0 0;
+    color: orangered;
+    font-size: 1.4em;
 }
