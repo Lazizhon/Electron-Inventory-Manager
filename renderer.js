@@ -178,9 +178,7 @@ function populateSide() {
 function saveProd(id) {
     var found = false;   
     var list = jobj.Guide;
-    alert(id);
     var ID = id.slice(0, -2) + "R";
-    alert(id.id);
     var row = document.getElementById(ID);
     for (var i = 0; i < list.length; i++) {
       var listCat = list[i].category;
@@ -379,7 +377,7 @@ function setEdit (ebtn) {
         desc.getAttribute("orig-content")  !== desc.innerHTML    ||
         price.getAttribute("orig-content") !== price.innerHTML   ||
         qty.getAttribute("orig-content")   !== qty.innerHTML) {
-          saveProd(ebtn);
+          saveProd(ebtn.id);
       }
   }
 }
@@ -489,8 +487,7 @@ function formControl (fb) {
 
   savebtn.onclick = function () {
     if (savebtn.id === "form-save-btn-enabled") {
-      alert(this.getAttribute("rid"));
-      saveProd(this.getAttribute("rid"));
+      saveForm(rowDiv);
       this.id = "form-save-btn-disabled";
     }
   };
@@ -640,31 +637,22 @@ function addTextListener(textArea) {
   }); 
 }
 
-function saveForm(id) {
+function saveForm(row) {
     var found = false;   
     var list = jobj.Guide;
-    alert(id);
-    var ID = id.slice(0, -2) + "R";
-    alert(id.id);
-    var row = document.getElementById(ID);
     for (var i = 0; i < list.length; i++) {
       var listCat = list[i].category;
       for (var k = 0; k < listCat.length; k++) {
         var listProd = listCat[k].products;
         if (listCat[k].name === currCat) {
           for (var j = 0; j < listProd.length; j++) {
-            var children = row.childNodes;
             if (row.id.slice(0, -1) === listProd[j].stockID) {
-              listProd[j].stockID = children[0].innerHTML;
-              listProd[j].title = children[1].innerHTML;
-              listProd[j].price = children[2].innerHTML;
-              docChanged = true;
-              document.getElementById("save-btn").className="save-btn-warn";
-              found = true;
-            }
-            else if ((j + 1) == listProd.length && !found) {
-              listProd.splice(listProd.length, 1, {"stockID" : children[0].innerHTML, 
-              "title" : children[1].innerHTML, "price" : children[2].innerHTML});
+              listProd[j].stockID = row.childNodes[1].childNodes[1].value;
+              listProd[j].price = row.childNodes[2].childNodes[1].value;
+              listProd[j].qty = row.childNodes[3].childNodes[1].value;
+              listProd[j].url = row.childNodes[4].childNodes[1].value;
+              listProd[j].title = row.childNodes[5].childNodes[1].value;
+              listProd[j].notes = row.childNodes[6].childNodes[1].value;
               docChanged = true;
               document.getElementById("save-btn").className="save-btn-warn";
               found = true;
