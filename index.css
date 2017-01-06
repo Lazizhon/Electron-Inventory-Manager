@@ -14,7 +14,7 @@ html, body {
     height: 45px;
     width: 1375px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: linear-gradient(midnightblue, midnightblue);
+    background: linear-gradient(#003366, #003366);
 }
 
 #nav ul {
@@ -227,6 +227,8 @@ html, body {
     margin: 5px 0 0 25px;
     width: 30px;
     height: 15px;
+    color: black;
+    font-weight: bolder;
 }
 
 .textBox-small {
@@ -243,12 +245,15 @@ html, body {
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;   
+    color: black;
 }
 
 .textTitle-large {
     margin: 0 0 15px 10px;
     width: 100px;
     height: 15px;
+    color: black;
+    font-weight: bolder;
 }
 
 .textBox-large {
@@ -263,7 +268,8 @@ html, body {
     border-radius: 7px;
     outline: none;
     border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;   
+    box-shadow: 0 0 10px #9ecaed;  
+    color: black; 
 }
 
 .slt-mnu {
@@ -277,7 +283,7 @@ html, body {
     padding: 35px 0 0 0;
     display: inline-block;
     height: 800px;
-    margin: -32px 0 0 -25px;
+    margin: -10px 0 0 -25px;
     width: 200px;
     float: left;
     border-width: .5px;
@@ -285,7 +291,7 @@ html, body {
     font-size: 14px;
     border-color: midnightblue;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: linear-gradient(midnightblue, midnightblue);
+    background: linear-gradient(#003377, #003377);
 }
 
 .guide {
@@ -303,30 +309,31 @@ html, body {
 #sidebar ul {
     list-style-type: none;
     font-family: 'Carrois Gothic', sans-serif;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    color: ghostwhite;
+    /*text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
+    font-weight: bolder;
+    color: lightslategray;
 }
 
 #sidebar li {
     font-family: 'Carrois Gothic', sans-serif;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    color: ghostwhite;
+    /*text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
+    font-weight: bolder;
+    color: lightslategray;
 }
 
 #mainWin {
     padding: 0;
-    border-radius: 4px;
     display: inline-block;
     height: 1000px;
-    width: 1185px;
+    width: 1190px;
     margin: 0 0 0 0;
     overflow: scroll;
     border-style: solid;
     border-width: .5px;
     border-color: #dddddd;
     position: fixed;
-    top: 80px;
-    left: 180px;
+    top: 75px;
+    left: 175px;
 }
 
 .invBlocklt {
@@ -342,16 +349,16 @@ html, body {
 
 .invBlock-exp {
     display: block;
-    border-style: solid;
+    border-style: inset;
     border-width: .5px;
-    border-radius: 7px;
-    width: 1190px;
+    width: 1200px;
     height: 500px;
-    margin: 0;
+    margin: 0 0 0 -5px;
     transition-duration: 0.5s;
     outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
+    border-color: darkslategray;;
+    box-shadow: 0 0 10px darkslategray;;
+    background: darkslategray;
 }
 
 .invBlockdr {
@@ -403,9 +410,6 @@ html, body {
           border-radius: 0 !important;
 }
 
-#cat {
-}
-
 #prod li{
   cursor: pointer;
   text-decoration: none;
@@ -413,11 +417,14 @@ html, body {
 }
 
 #cats {
+    margin: -10px 0 0 25px;
+    padding: 5px 0 0 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(#003399, #003399);
     opacity: 1;
     transition: opacity 0.4s transition;
-    -ms-transition: opacity 0.4s transition;
-    -moz-transition: opacity 0.4s transition;
-    -webkit-transition: opacity 0.4s transition;
+    height: 30px;
+    color: ghostwhite;
 }
 
 #cats-hidden {
@@ -434,8 +441,8 @@ html, body {
     text-decoration: none;
     border-radius: 1px;
     outline: none;
-    border-color: gray;
-    box-shadow: 0 0 2px gray;
+    border-color: darkred;;
+    box-shadow: 0 0 2px darkred;;
     transition-duration: 0.3s;
 }
 
@@ -445,8 +452,8 @@ html, body {
     text-decoration: none;
     border-radius: 1px;
     outline: none;
-    border-color: gray;
-    box-shadow: 0 0 2px gray;
+    border-color: darkred;;
+    box-shadow: 0 0 2px darkred;;
     transition-duration: 0.3s;
 }
 
@@ -459,24 +466,30 @@ html, body {
     text-decoration: none; 
 }
 
-#prod li:active {
-    transition-duration: 0.3s;
-}
-
 .normal {
   cursor: pointer;
   text-decoration: none;
   transition-duration: 0.3s;
 }
 
-.active {
-    background-color: darkred;
-    color: ghostwhite;
+.active-prodCat {
+    background-color: #003399;
+    color: ghostwhite !important;
     text-decoration: none;
     border-radius: 1px;
     outline: none;
-    border-color: gray;
-    box-shadow: 0 0 2px gray;
+    border-color: #003399;
+    box-shadow: 0 0 2px #003399;
+}
+
+.active-prod {
+    background-color: darkred;
+    color: ghostwhite !important;
+    text-decoration: none;
+    border-radius: 1px;
+    outline: none;
+    border-color: darkred;
+    box-shadow: 0 0 2px darkred;
 }
 [contenteditable="true"]:focus{
     border:none;

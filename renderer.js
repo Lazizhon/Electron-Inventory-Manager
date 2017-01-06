@@ -153,7 +153,10 @@ function populateSide() {
     var listGuide = list[i];
     var listCat = listGuide.category;
     var li = document.createElement('li');
-    li.appendChild(document.createTextNode(listGuide.title));
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(listGuide.title));
+    li.appendChild(div);
+    div.className = "prodCat";
     var ul = document.createElement('ul');
     ul.id = "prod";
     for (var k = 0; k < listCat.length; k++) {
@@ -326,14 +329,18 @@ function setElem (elem) {
 }
 
 function removeActive () {
-  let active = document.getElementsByClassName('active');
+  let active = document.getElementsByClassName('active-prod');
   for (let i = 0; i < active.length; i++) {
     active[i].className = "normal";
   }
+  let activeCat = document.getElementsByClassName('active-prodCat');
+  if (activeCat[0]) activeCat[0].className = "";
 }
 
 function setActive (elem) {
-  elem.childNodes[0].className = "active";
+  var div = elem.parentNode.parentNode.childNodes[0];
+  div.className = "active-prodCat";
+  elem.childNodes[0].className = "active-prod";
 }
 
 function setEdit (ebtn) { 
