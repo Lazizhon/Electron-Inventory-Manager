@@ -10,12 +10,13 @@
               "stockID": "33-2022",
               "title": "86-93 Buick/86-96 Oldsmobile/Pontiac/90-96 Chevrolet K&amp;N High Performance Air Filter",
               "price": "$38.99",
-              "qty": "1",
+              "qty": "2",
               "location": "Showroom",
-              "url": "http://dicksautoparts.com/i-23892073-90-96-chevrolet-86-93-buick-86-96-oldsmobile-pontiac-kn-high-performance-air-filter.html",
+              "url": "www.dicksautoparts.com",
               "make": "chevy/gmc",
-              "inStock": "",
-              "notes": ""
+              "inStock": true,
+              "notes": "CHANGING STOCK",
+              "description": "86-93 Buick/86-96 Oldsmobile/Pontiac/90-96 Chevrolet K&amp;N High Performance Air Filter"
             },
             {
               "price": "$49.99",
@@ -26,7 +27,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -38,7 +39,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -50,7 +51,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -62,7 +63,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -74,7 +75,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -86,7 +87,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -98,7 +99,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -110,7 +111,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -122,7 +123,7 @@
               "location": "Showroom",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -134,7 +135,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -146,7 +147,7 @@
               "location": "B",
               "url": "",
               "make": "chevy/gmc",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -158,7 +159,7 @@
               "location": "B",
               "url": "",
               "make": "dodge",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -170,7 +171,7 @@
               "location": "B",
               "url": "",
               "make": "dodge",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -182,7 +183,7 @@
               "location": "Showroom",
               "url": "",
               "make": "dodge",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -194,7 +195,7 @@
               "location": "B",
               "url": "",
               "make": "dodge",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -206,7 +207,7 @@
               "location": "B",
               "url": "",
               "make": "ford",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -218,7 +219,7 @@
               "location": "B",
               "url": "",
               "make": "ford",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -230,7 +231,7 @@
               "location": "B",
               "url": "",
               "make": "ford",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -242,7 +243,7 @@
               "location": "B",
               "url": "",
               "make": "ford",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -254,7 +255,7 @@
               "location": "B",
               "url": "",
               "make": "ford",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -266,7 +267,7 @@
               "location": "Showroom",
               "url": "",
               "make": "ford",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -278,8 +279,9 @@
               "location": "Showroom",
               "url": "",
               "make": "ford",
-              "inStock": "",
-              "notes": ""
+              "inStock": true,
+              "notes": "",
+              "description": "99-03 Ford F-250/F-350/F-450/F-550 Super Duty 7.3L-V8 TD K&amp;N High Performance Air Filter"
             },
             {
               "qty": "2",
@@ -290,7 +292,7 @@
               "location": "Showroom",
               "url": "",
               "make": "ford",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -302,7 +304,7 @@
               "location": "Showroom",
               "url": "",
               "make": "ford",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -314,7 +316,7 @@
               "location": "B",
               "url": "",
               "make": "ford",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -326,7 +328,7 @@
               "location": "B",
               "url": "",
               "make": "jeep",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -338,7 +340,7 @@
               "location": "B",
               "url": "",
               "make": "import",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -350,7 +352,7 @@
               "location": "B",
               "url": "",
               "make": "import",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -362,7 +364,7 @@
               "location": "B",
               "url": "",
               "make": "import",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -374,7 +376,7 @@
               "location": "B",
               "url": "",
               "make": "import",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -386,7 +388,7 @@
               "location": "Showroom",
               "url": "",
               "make": "import",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -398,7 +400,7 @@
               "location": "Showroom",
               "url": "",
               "make": "import",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -410,7 +412,7 @@
               "location": "B",
               "url": "",
               "make": "import",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -422,7 +424,7 @@
               "location": "B",
               "url": "",
               "make": "universal",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -434,7 +436,7 @@
               "location": "B",
               "url": "",
               "make": "universal",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -446,7 +448,7 @@
               "location": "B",
               "url": "",
               "make": "universal",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -458,7 +460,7 @@
               "location": "B",
               "url": "",
               "make": "universal",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -470,7 +472,7 @@
               "location": "B",
               "url": "",
               "make": "universal",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -482,7 +484,7 @@
               "location": "B",
               "url": "",
               "make": "universal",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -494,7 +496,7 @@
               "location": "B",
               "url": "",
               "make": "universal",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             },
             {
@@ -506,7 +508,7 @@
               "location": "B",
               "url": "",
               "make": "universal",
-              "inStock": "",
+              "inStock": true,
               "notes": ""
             }
           ]
@@ -522,7 +524,7 @@
               "location": "A1A",
               "type": "bed section",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": "http://dicksautoparts.com/i-23894144-99-06-chevy-silverado-gmc-sierra-std-crew-ext-drivers-side-rear-lower-6-short-bed-section.html"
             },
@@ -534,7 +536,7 @@
               "location": "A1A",
               "type": "bed section",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -546,7 +548,7 @@
               "location": "A1A",
               "type": "bed section",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -558,7 +560,7 @@
               "location": "A1A",
               "type": "bed section",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -570,7 +572,7 @@
               "location": "A4E",
               "type": "bed section",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -582,7 +584,7 @@
               "location": "A3E",
               "type": "bed section",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -594,7 +596,7 @@
               "location": "A3E",
               "type": "bed section",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -606,7 +608,7 @@
               "location": "A4A",
               "type": "bed section",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -618,7 +620,7 @@
               "location": "A4F",
               "type": "bed section",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -630,7 +632,7 @@
               "location": "A4C",
               "type": "cab corners",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -642,7 +644,7 @@
               "location": "A4D",
               "type": "cab corners",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -654,7 +656,7 @@
               "location": "A1A",
               "type": "cab corners",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -666,7 +668,7 @@
               "location": "A1A",
               "type": "cab corners",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -678,7 +680,7 @@
               "location": "A4G",
               "type": "cab corners",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -690,7 +692,7 @@
               "location": "A1A",
               "type": "cab mounts",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -702,7 +704,7 @@
               "location": "A1A",
               "type": "cab mounts",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -714,7 +716,7 @@
               "location": "A1A",
               "type": "cab mounts",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -726,7 +728,7 @@
               "location": "A1A",
               "type": "cab mounts",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -738,7 +740,7 @@
               "location": "A6B",
               "type": "crossmembers",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -750,7 +752,7 @@
               "location": "A1E",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -762,7 +764,7 @@
               "location": "A3E",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -774,7 +776,7 @@
               "location": "A3D",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -786,7 +788,7 @@
               "location": "A4E",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -798,7 +800,7 @@
               "location": "A4E",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -810,7 +812,7 @@
               "location": "A3E",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -822,7 +824,7 @@
               "location": "A3E",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -834,7 +836,7 @@
               "location": "A4G",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -846,7 +848,7 @@
               "location": "A4G",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -858,7 +860,7 @@
               "location": "A4G",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -870,7 +872,7 @@
               "location": "A2D",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -882,7 +884,7 @@
               "location": "A2D",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -894,7 +896,7 @@
               "location": "A3G",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -906,7 +908,7 @@
               "location": "A3G",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -918,7 +920,7 @@
               "location": "A3F",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -930,7 +932,7 @@
               "location": "A3E",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -942,7 +944,7 @@
               "location": "A3F",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -954,7 +956,7 @@
               "location": "A3G",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -966,7 +968,7 @@
               "location": "A4F",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -978,7 +980,7 @@
               "location": "A3G",
               "type": "door skins",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -990,7 +992,7 @@
               "location": "A4F",
               "type": "floor pans",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1002,7 +1004,7 @@
               "location": "A4F",
               "type": "floor pans",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1014,7 +1016,7 @@
               "location": "A1F",
               "type": "floor pans",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1026,7 +1028,7 @@
               "location": "A4F",
               "type": "floor pans",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1038,7 +1040,7 @@
               "location": "A4A",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1050,7 +1052,7 @@
               "location": "",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1062,7 +1064,7 @@
               "location": "A3G",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1074,7 +1076,7 @@
               "location": "",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1086,7 +1088,7 @@
               "location": "",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1098,7 +1100,7 @@
               "location": "",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1110,7 +1112,7 @@
               "location": "A3F",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1122,7 +1124,7 @@
               "location": "A3F",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1134,7 +1136,7 @@
               "location": "A4G",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1146,7 +1148,7 @@
               "location": "A4G",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1158,7 +1160,7 @@
               "location": "",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1170,7 +1172,7 @@
               "location": "",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1182,7 +1184,7 @@
               "location": "",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1194,7 +1196,7 @@
               "location": "",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1206,7 +1208,7 @@
               "location": "A41A",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1218,7 +1220,7 @@
               "location": "A41A",
               "type": "quarter panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1230,7 +1232,7 @@
               "location": "A3G",
               "type": "rocker panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1242,7 +1244,7 @@
               "location": "A6F",
               "type": "rocker panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1254,7 +1256,7 @@
               "location": "A6F",
               "type": "rocker panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1266,7 +1268,7 @@
               "location": "A3G",
               "type": "rocker panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1278,7 +1280,7 @@
               "location": "A4G",
               "type": "rocker panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1290,7 +1292,7 @@
               "location": "A4G",
               "type": "rocker panels",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1302,7 +1304,7 @@
               "location": "A4G",
               "type": "wheel arches",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1314,7 +1316,7 @@
               "location": "A3G",
               "type": "wheel arches",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             }
@@ -1330,10 +1332,11 @@
               "title": "07-13 Chevy Silverado/GMC Sierra 1500 5.5' Over-Rail Bed Liner",
               "price": "129",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
-              "notes": ""
+              "notes": "",
+              "description": "07-13 Chevy Silverado/GMC Sierra 1500 5.5' Over-Rail Bed Liner"
             },
             {
               "type": "COL",
@@ -1342,7 +1345,7 @@
               "title": "88-98 Chevy/GMC C/K 6' Stepside Bed Under-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1354,7 +1357,7 @@
               "title": "95-04 Toyota Tacoma 6' Bed Under-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1366,7 +1369,7 @@
               "title": "93-98 Toyota T-100 8' Under-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1378,7 +1381,7 @@
               "title": "88-98 Chevy/GMC C/K 8' Over-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1390,7 +1393,7 @@
               "title": "88-98 Chevy/GMC C/K 6' Over-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1402,7 +1405,7 @@
               "title": "99-06 Chevy Silverado/GMC Sierra 6' Under-Rail Bed Liner",
               "price": "129",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1414,7 +1417,7 @@
               "title": "95-04 Toyota Tacoma 6' Under-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1426,7 +1429,7 @@
               "title": "95-01 Dodge Ram 8' Over-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1438,7 +1441,7 @@
               "title": "99-06 Chevy Silverado/GMC Sierra 1500 6' Stepside Bed Under-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1450,7 +1453,7 @@
               "title": "95-01 Dodge 6' Under-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1462,7 +1465,7 @@
               "title": "04-12 Chevy Colorado/GMC Canyon 6' Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1474,7 +1477,7 @@
               "title": "95-01 Dodge Ram 8' Over-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1486,7 +1489,7 @@
               "title": "94-03 Chevy S-10/GMC Sonoma 6' Stepside Under-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1498,7 +1501,7 @@
               "title": "00-04 Dodge Dakota Quad Cab 5.5' Under-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1510,7 +1513,7 @@
               "title": "04-08 Ford F-150 Flairside 6.5' Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1522,7 +1525,7 @@
               "title": "97-11 Ford Ranger 6' Under-Rail Bed Liner",
               "price": "99",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1534,7 +1537,7 @@
               "title": "99-07 Ford OEM Bed Liner",
               "price": "75",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1546,7 +1549,7 @@
               "title": "99-16 Ford Rugged Liner Bed Liner",
               "price": "75",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1558,7 +1561,7 @@
               "title": "94-01 Dodge Ram 8' Long Bed All-Star Bed Liner",
               "price": "50",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1570,7 +1573,7 @@
               "title": "06-08 Dodge Ram 8' Long Bed OEM Over-Rail Bed Liner",
               "price": "50",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1582,7 +1585,7 @@
               "title": "07-13 GMC Sierra 8' Long Bed OEM Over-Rail Bed Liner",
               "price": "75",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1594,7 +1597,7 @@
               "title": "07-13 Chevy Silverado 8' Long Bed OEM Over-Rail Bed Liner",
               "price": "75",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1606,7 +1609,7 @@
               "title": "99-07 Chevy Silverado/GMC Sierra 8' Long Bed TrailFX Over-Rail Bed Liner",
               "price": "75",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1618,7 +1621,7 @@
               "title": "99-07 Chevy Silverado/GMC Sierra 6.5' Short Bed Rugged Liner Over-Rail Bed Liner",
               "price": "75",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1630,7 +1633,7 @@
               "title": "81-87 Chevy/GMC C/K Gray (faded/discolored) Over-Rail Bed Liner",
               "price": "25",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1642,7 +1645,7 @@
               "title": "99-06 Chevy Silverado/GMC Sierra 6.5' Short Bed All Star Bed Liner",
               "price": "50",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1654,7 +1657,7 @@
               "title": "99-06 Chevy Silverado/GMC Sierra 6.5' Short Bed OEM Bed Liner",
               "price": "50",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1666,7 +1669,7 @@
               "title": "94-03 Chevy S-10/GMC Sonoma 6' Stepside Bed Liner",
               "price": "40",
               "location": "Lot",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "make": "",
               "notes": ""
@@ -1684,7 +1687,7 @@
               "type": "Stainless",
               "location": "A19C",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1696,7 +1699,7 @@
               "type": "Stainless",
               "location": "A19C",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1708,7 +1711,7 @@
               "type": "Stainless",
               "location": "A19C",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1720,7 +1723,7 @@
               "type": "Stainless",
               "location": "A19C",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1732,7 +1735,7 @@
               "type": "Stainless",
               "location": "A19C",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1744,7 +1747,7 @@
               "type": "Stainless",
               "location": "A19C",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1756,7 +1759,7 @@
               "type": "Stainless",
               "location": "A19C",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1768,7 +1771,7 @@
               "type": "Stainless",
               "location": "B16D",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1780,7 +1783,7 @@
               "type": "Stainless",
               "location": "B16D",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1792,7 +1795,7 @@
               "type": "Stainless",
               "location": "B16D",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1804,7 +1807,7 @@
               "type": "Stainless",
               "location": "A19C",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1816,7 +1819,7 @@
               "type": "Black",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1828,7 +1831,7 @@
               "type": "DiamondAluminum",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1840,7 +1843,7 @@
               "type": "DiamondAluminum",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1852,7 +1855,7 @@
               "type": "DiamondAluminum",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1864,7 +1867,7 @@
               "type": "Stainless",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1876,7 +1879,7 @@
               "type": "Stainless",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1888,7 +1891,7 @@
               "type": "Stainless",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1900,7 +1903,7 @@
               "type": "Stainless",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1912,7 +1915,7 @@
               "type": "Aluminum",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1924,7 +1927,7 @@
               "type": "Aluminum",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1936,7 +1939,7 @@
               "type": "Aluminum",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1948,7 +1951,7 @@
               "type": "DiamondAluminum",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1960,7 +1963,7 @@
               "type": "Black",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1972,7 +1975,7 @@
               "type": "Black",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1984,7 +1987,7 @@
               "type": "Aluminum",
               "location": "A51F",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -1996,7 +1999,7 @@
               "type": "Aluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2008,7 +2011,7 @@
               "type": "Aluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2020,7 +2023,7 @@
               "type": "Aluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2032,7 +2035,7 @@
               "type": "Black",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2044,7 +2047,7 @@
               "type": "Black",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2056,7 +2059,7 @@
               "type": "Aluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2068,7 +2071,7 @@
               "type": "Aluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2080,7 +2083,7 @@
               "type": "Black",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2092,7 +2095,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2104,7 +2107,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2116,7 +2119,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2128,7 +2131,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2140,7 +2143,7 @@
               "type": "Aluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2152,7 +2155,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2164,7 +2167,7 @@
               "type": "Aluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2176,7 +2179,7 @@
               "type": "Aluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2188,7 +2191,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2200,7 +2203,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2212,7 +2215,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2224,7 +2227,7 @@
               "type": "Stainless",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2236,7 +2239,7 @@
               "type": "Stainless",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2248,7 +2251,7 @@
               "type": "Stainless",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2260,7 +2263,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2272,7 +2275,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2284,7 +2287,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2296,7 +2299,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2308,7 +2311,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2320,7 +2323,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2332,7 +2335,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2344,7 +2347,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2356,7 +2359,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2368,7 +2371,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2380,7 +2383,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2392,7 +2395,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2404,7 +2407,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2416,7 +2419,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2428,7 +2431,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2440,7 +2443,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2452,7 +2455,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2464,7 +2467,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2476,7 +2479,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2488,7 +2491,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2500,7 +2503,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2512,7 +2515,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2524,7 +2527,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2536,7 +2539,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2548,7 +2551,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2560,7 +2563,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2572,7 +2575,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2584,7 +2587,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2596,7 +2599,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2608,7 +2611,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2620,7 +2623,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2632,7 +2635,7 @@
               "type": "Black",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2644,7 +2647,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2656,7 +2659,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2668,7 +2671,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2680,7 +2683,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2692,7 +2695,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2704,7 +2707,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2716,7 +2719,7 @@
               "type": "DiamondAluminum",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2728,7 +2731,7 @@
               "type": "Stainless",
               "location": "A52E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2740,7 +2743,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2752,7 +2755,7 @@
               "type": "DiamondAluminum",
               "location": "A51E",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2764,7 +2767,7 @@
               "type": "Black",
               "location": "A19B",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2776,7 +2779,7 @@
               "type": "Black",
               "location": "A19B",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2788,7 +2791,7 @@
               "type": "Black",
               "location": "A19B",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2800,7 +2803,7 @@
               "type": "Black",
               "location": "A19B",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2812,7 +2815,7 @@
               "type": "Black",
               "location": "A19B",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             }
@@ -2829,7 +2832,7 @@
               "location": "A21D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2841,7 +2844,7 @@
               "location": "A22D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2853,7 +2856,7 @@
               "location": "A22D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             },
@@ -2865,7 +2868,7 @@
               "location": "A32B",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "notes": "",
               "url": ""
             }
@@ -2883,9 +2886,10 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
-              "notes": ""
+              "notes": "",
+              "description": "08-10 Ford F-250/F-350 Super Duty AVS Bugflector II Deluxe 3-Piece Bug Shield"
             },
             {
               "qty": "1",
@@ -2896,7 +2900,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -2909,7 +2913,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -2922,7 +2926,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -2935,7 +2939,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -2948,7 +2952,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -2961,7 +2965,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -2974,7 +2978,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -2987,7 +2991,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3000,7 +3004,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3013,7 +3017,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3026,7 +3030,7 @@
               "location": "A20D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3039,7 +3043,7 @@
               "location": "A20C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3052,7 +3056,7 @@
               "location": "A20C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3065,7 +3069,7 @@
               "location": "A20C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3078,7 +3082,7 @@
               "location": "A20C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3091,7 +3095,7 @@
               "location": "A20C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3104,7 +3108,7 @@
               "location": "A20C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3117,7 +3121,7 @@
               "location": "A20C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3130,7 +3134,7 @@
               "location": "A20C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3143,7 +3147,7 @@
               "location": "A20C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3156,7 +3160,7 @@
               "location": "A54D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3169,7 +3173,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3182,7 +3186,7 @@
               "location": "A54D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3195,7 +3199,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3208,7 +3212,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3221,7 +3225,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3234,7 +3238,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3247,7 +3251,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3260,7 +3264,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3273,7 +3277,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3286,7 +3290,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3299,7 +3303,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3312,7 +3316,7 @@
               "location": "A54E",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3325,7 +3329,7 @@
               "location": "A54D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3338,7 +3342,7 @@
               "location": "A54D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3351,7 +3355,7 @@
               "location": "A54D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3364,7 +3368,7 @@
               "location": "A54D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3377,7 +3381,7 @@
               "location": "A54D",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3390,7 +3394,7 @@
               "location": "A52C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3403,7 +3407,7 @@
               "location": "A52C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3416,7 +3420,7 @@
               "location": "A52C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3429,7 +3433,7 @@
               "location": "A52C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3442,7 +3446,7 @@
               "location": "A52C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3455,7 +3459,7 @@
               "location": "A52C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3468,7 +3472,7 @@
               "location": "A52C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3481,7 +3485,7 @@
               "location": "A52C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3494,7 +3498,7 @@
               "location": "A52C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             }
@@ -3511,7 +3515,7 @@
               "location": "B16A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             }
@@ -3528,7 +3532,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3540,7 +3544,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3552,7 +3556,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3564,7 +3568,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3576,7 +3580,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3588,7 +3592,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3600,7 +3604,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3612,7 +3616,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3624,7 +3628,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3636,7 +3640,7 @@
               "location": "A45C",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             }
@@ -3654,7 +3658,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3667,7 +3671,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3680,7 +3684,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3693,7 +3697,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3706,7 +3710,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3719,7 +3723,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3732,7 +3736,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3745,7 +3749,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3758,7 +3762,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3771,7 +3775,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3784,7 +3788,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3797,7 +3801,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3810,7 +3814,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3823,7 +3827,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             },
@@ -3836,7 +3840,7 @@
               "location": "A8A",
               "type": "",
               "make": "",
-              "inStock": "",
+              "inStock": true,
               "url": "",
               "notes": ""
             }

@@ -55,6 +55,7 @@ html, body {
     font-family: FontAwesome;
     font-size: 1.5em;
     color: ghostwhite;
+    transition-duration: 0.9s;
     content: "\f0c7";
 }
 
@@ -62,7 +63,7 @@ html, body {
     cursor: pointer;
     margin: 0 10px 0 10px;
     display: inline;
-    transition-duration: 0.6s;
+    transition-duration: 0.9s;
     background: transparent;
 }
 
@@ -70,6 +71,7 @@ html, body {
     display: inline-block;
     font-family: FontAwesome;
     font-size: 1.5em;
+    transition-duration: 0.9s;
     color: darkorange;
     content: "\f0c7";
 }
@@ -347,14 +349,28 @@ html, body {
   background: #eeeaef;
 }
 
+.invBlock-oos {
+  transition-duration: 0.5s;
+  position: relative;
+  display: block;
+  border: none;
+  width: 1190px;
+  height: 30px;
+  margin: 0;
+  background-color: rgba(250,250,0, .8); /* Black w/opacity */
+}
+
 .invBlock-exp {
+    z-index: 1;
+    position: absolute;
+    top: 400px;
     display: block;
     border-style: inset;
     border-width: .5px;
     width: 1200px;
-    height: 500px;
-    margin: 0 0 0 -5px;
-    transition: height 0.3s ease-in-out;
+    height: 625px;
+    margin: -5px 0 0 -5px;
+    transition: all 0.1s ease-in-out;
     outline: none;
     border-color: #003399;
     box-shadow: 0 0 15px #003399;
@@ -629,7 +645,7 @@ html, body {
     background-color:darkblue;
     color: ghostwhite;
     transition-duration: 0.9s;
-    position: relative
+    position: relative;
     display: block;
     border: none;
     width: 1190px;
@@ -674,4 +690,66 @@ html, body {
     color: orangered;
     font-size: 1.4em;
     transition: color 0.5s ease-in-out;
+}
+
+.alert-overlay-warn {
+    font-weight: bolder;
+    border-radius: 5px;
+    width: 500px;
+    height: 45px;
+    z-index: 1;
+    top: 475px;
+    left: 500px;
+    position: relative;
+    border: solid transparent;
+    background-color: rgba(150,0,0, .8); /* Black w/opacity */
+    transition: width 0.9s ease;
+    transition-duration: 0.9s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.alert-overlay-success {
+    font-weight: bolder;
+    border-radius: 5px;
+    width: 500px;
+    height: 45px;
+    z-index: 1;
+    top: 475px;
+    left: 500px;
+    position: relative;
+    border: solid transparent;
+    background-color: rgba(0,150,0, .8); /* Black w/opacity */
+    transition: all 0.5s ease;
+    transition-duration: 0.4s;
+    outline: none;
+    box-shadow: 0 0 10px #9ecaed;   
+}
+
+.alert-overlay-text {
+   font-weight: bold;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+#anchor {
+    display: none;
+    z-index: -2;
+}
+
+.cbox {
+    transition: all 0.5s ease;
+    transition-duration: 0.4s;
+    border-radius: 7px;
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;   
+    position: relative;
+    top: 5px;
+    left: 40px;
 }
