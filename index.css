@@ -296,6 +296,23 @@ html, body {
     background: linear-gradient(#003377, #003377);
 }
 
+#sidebar-closed {
+    position: relative;
+    left: -100px;
+    padding: 35px 0 0 0;
+    display: inline-block;
+    height: 800px;
+    margin: -10px 0 0 -25px;
+    width: 200px;
+    float: left;
+    border-width: .5px;
+    border-style: solid;
+    font-size: 14px;
+    border-color: midnightblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(#003377, #003377);
+}
+
 .guide {
   margin: 0 115px 0 -150px;
   display: inline-block;
@@ -752,4 +769,19 @@ html, body {
     position: relative;
     top: 5px;
     left: 40px;
+}
+
+.print-menu {
+    font-weight: bolder;
+    width: auto;
+    height: 1500px;
+    z-index: 1;
+    position: relative;
+    top: -75px;
+    border: solid transparent;
+    background-color: rgba(0,0,0, .4); /* Black w/opacity */
+    transition: all 0.5s ease;
+    transition-duration: 0.4s;
+    outline: none;
+    box-shadow: 0 0 10px #9ecaed;   
 }

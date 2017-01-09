@@ -7,9 +7,11 @@ const {BrowserWindow} = require('electron').remote
 const jobj   = require(jsfp); //(with path)
 const fs     = require('fs');
 const mainW = document.getElementById('mainWin');
+const body  = document.getElementById('mainContainer');
 var docChanged = false;
 var eleChanged = false;
 let editing = false;
+let print = document.getElementById('print-btn');
 
 var currCat;
 var times = 0;
@@ -50,6 +52,10 @@ searchBar.addEventListener("keypress", function(e) {
   }
 })
 
+print.addEventListener("click", function(e) {
+  createPrintMenu();
+}); 
+
 function clearWarn(elem) {
   searchBar.className = "search-bar-primary";
 }
@@ -62,6 +68,7 @@ document.getElementById("settings-btn").addEventListener("click", function(e) {
   else {
     document.getElementById("cats-hidden").id = "cats";
   }
+  document.getElementById('sidebar').id = "sidebar-closed";
 });
 
 document.getElementById("close-search-btn").addEventListener("click", function(e) {
@@ -228,6 +235,7 @@ function fillProduct(eID) {
               removeElems("invBlockdr");
               removeElems("invBlocklt");
               removeElems("invBlock-oos");
+              removeElems("highlight-row");
               for (var j = 0; j < listProd.length; j++) {
                 var prodRow = document.createElement('div');
                 var stock   = document.createElement('div');
@@ -343,7 +351,7 @@ function setElem (elem) {
     fillProduct(elem.id);
   }
   else {
-    warnAlert ("Close Form");
+    warnAlert ("Form view open: Please close first...");
   }
 }
 
@@ -750,3 +758,9 @@ function successAlert (message) {
     location.removeChild(div); 
   }, 4000);
 };
+
+function createPrintMenu () {
+  var printMenu = document.createElement('div');
+  printMenu.className = "print-menu";
+  body.appendChild(printMenu);
+}
