@@ -526,7 +526,8 @@
               "make": "",
               "inStock": true,
               "notes": "",
-              "url": "http://dicksautoparts.com/i-23894144-99-06-chevy-silverado-gmc-sierra-std-crew-ext-drivers-side-rear-lower-6-short-bed-section.html"
+              "url": "http://dicksautoparts.com/i-23894144-99-06-chevy-silverado-gmc-sierra-std-crew-ext-drivers-side-rear-lower-6-short-bed-section.html",
+              "description": "99-06 Chevy Silverado/GMC Sierra Standard/Crew/Extended ' Door Driver's Side Rear Lower 6' Short Bed Section"
             },
             {
               "stockID": "0856 136",
@@ -3849,7 +3850,7 @@
       ]
     },
     {
-      "title": "Showroom Wheels/Tires",
+      "title": "Showroom Wheels&Tires",
       "category": [
         {
           "name": "Wheels",

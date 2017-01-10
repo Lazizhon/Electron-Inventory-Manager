@@ -2,6 +2,8 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 const jsfp   = './inventory.json';
+var XLSX = require('xlsx')
+const jsonXlsx = require('icg-json-to-xlsx');
 const remote = require('electron').remote;
 const {BrowserWindow} = require('electron').remote
 const jobj   = require(jsfp); //(with path)
@@ -762,5 +764,100 @@ function successAlert (message) {
 function createPrintMenu () {
   var printMenu = document.createElement('div');
   printMenu.className = "print-menu";
+  var iconContainer = document.createElement('div');
+  iconContainer.className = "xport-icon-container";
+  var iconText = document.createElement('div');
+  iconText.className = "icon-text";
+  iconText.innerHTML = "Export for Excel";
+  var xclIcon = document.createElement('i');
+  xclIcon.className = 'fa fa-file-excel-o';
+  xclIcon.id = 'xcelIcon';
+  xclIcon.onclick = function () {
+    saveToXLXS();
+  }
+  iconContainer.appendChild(iconText);
+  iconContainer.appendChild(xclIcon);
+
+  var iconContainer2 = document.createElement('div');
+  iconContainer2.className = "xport-icon-container";
+  var iconText2 = document.createElement('div');
+  iconText2.className = "icon-text";
+  iconText2.innerHTML = "Export to PDF";
+  var PDFIcon = document.createElement('i');
+  PDFIcon.className = 'fa fa-file-pdf-o';
+  PDFIcon.id = 'pdf-icon';
+  PDFIcon.onclick = function () {
+
+  }
+  iconContainer2.appendChild(iconText2);
+  iconContainer2.appendChild(PDFIcon);
+
+  printMenu.appendChild(iconContainer);
+  printMenu.appendChild(iconContainer2);
   body.appendChild(printMenu);
 }
+
+function saveToXLXS () {
+  var wb, guide = jobj.Guide;
+  for (var i = 0; i < guide.length; i++) {
+    var wb;
+    wb = createWorkbookFromJSON (guide[i]);
+    XLSX.writeFile(wb, guide[i].title + '.xlsx');
+  }
+  successAlert ("Successfully created " + guide.length + " guides");
+};
+
+function createWorkbookFromJSON (guide) {
+  var wb = {}
+  wb.Sheets = {};
+  wb.Props = {};
+  wb.SSF = {};
+  wb.SheetNames = [];
+  var jCat = guide.category;
+  for (var i = 0; i < jCat.length; i++){
+    var data = [["stockID", "title", "price", "qty", "location"]];
+    var ws_name = jCat[i].name;
+    var jProd = jCat[i].products;
+    for (var j = 0; j < jProd.length; j++) {
+      var pAttr = [jProd[j].stockID, jProd[j].title, jProd[j].price, jProd[j].qty, jProd[j].location];
+      data.push(pAttr);
+    }
+        var ws = {}
+
+        /* the range object is used to keep track of the range of the sheet */
+        var range = {s: {c:0, r:0}, e: {c:0, r:0 }};
+
+        /* Iterate through each element in the structure */
+        for(var R = 0; R != data.length; ++R) {
+          if(range.e.r < R) range.e.r = R;
+          for(var C = 0; C != data[R].length; ++C) {
+            if(range.e.c < C) range.e.c = C;
+
+            /* create cell object: .v is the actual data */
+            var cell = { v: data[R][C] };
+            if(cell.v == null) continue;
+
+            /* create the correct cell reference */
+            var cell_ref = XLSX.utils.encode_cell({c:C,r:R});
+
+            /* determine the cell type */
+            if(typeof cell.v === 'number') cell.t = 'n';
+            else if(typeof cell.v === 'boolean') cell.t = 'b';
+            else cell.t = 's';
+
+            /* add to structure */
+            ws[cell_ref] = cell;
+          }
+        }
+        ws['!ref'] = XLSX.utils.encode_range(range);
+
+        /* add worksheet to workbook */
+        wb.SheetNames.push(ws_name);
+        wb.Sheets[ws_name] = ws;
+      }
+    return wb;
+  };
+
+  function createPDF () {
+    
+  }
