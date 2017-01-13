@@ -281,32 +281,34 @@ html, body {
     box-shadow: 0 0 2px darkblue;   
 }
 
-#sidebar {
+.sidebar-open {
+    position: absolute;
+    top: 45px;
+    left: 0px;
     padding: 35px 0 0 0;
-    display: inline-block;
     height: 800px;
-    margin: -10px 0 0 -25px;
     width: 200px;
-    float: left;
     border-width: .5px;
     border-style: solid;
     font-size: 14px;
     border-color: midnightblue;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: linear-gradient(#003377, #003377);
+    transition-duration: 0.5s;
+    z-index: 3;
 }
 
-#sidebar-closed {
-    position: relative;
-    left: -100px;
+.sidebar-closed {
+    z-index: 3;
+    position: absolute;
+    top: 45px;
+    left: -200px;
     padding: 35px 0 0 0;
-    display: inline-block;
     height: 800px;
-    margin: -10px 0 0 -25px;
     width: 200px;
-    float: left;
     border-width: .5px;
     border-style: solid;
+    transition-duration: 0.5s;
     font-size: 14px;
     border-color: midnightblue;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -344,7 +346,7 @@ html, body {
     padding: 0;
     display: inline-block;
     height: 1000px;
-    width: 1190px;
+    width: 1375px;
     margin: 0 0 0 0;
     overflow: scroll;
     border-style: solid;
@@ -352,7 +354,6 @@ html, body {
     border-color: #dddddd;
     position: fixed;
     top: 75px;
-    left: 175px;
 }
 
 .invBlocklt {
@@ -360,7 +361,7 @@ html, body {
   position: relative;
   display: block;
   border: none;
-  width: 1190px;
+  width: 1375px;
   height: 30px;
   margin: 0;
   background: #eeeaef;
@@ -371,7 +372,7 @@ html, body {
   position: relative;
   display: block;
   border: none;
-  width: 1190px;
+  width: 1375px;
   height: 30px;
   margin: 0;
   background-color: rgba(250,250,0, .8); /* Black w/opacity */
@@ -384,7 +385,7 @@ html, body {
     display: block;
     border-style: inset;
     border-width: .5px;
-    width: 1200px;
+    width: auto;
     height: 625px;
     margin: -5px 0 0 -5px;
     transition: all 0.1s ease-in-out;
@@ -398,7 +399,7 @@ html, body {
   position: relative;
   display: block;
   border: none;
-  width: 1190px;
+  width: 1375px;
   height: 30px;
   margin: 0;
   transition-duration: 0.4s;
@@ -450,7 +451,7 @@ html, body {
 }
 
 #cats {
-    margin: -10px 0 0 25px;
+    margin: -10px 0 0 0;
     padding: 5px 0 0 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: linear-gradient(#003399, #003399);
@@ -460,22 +461,14 @@ html, body {
     color: ghostwhite;
 }
 
-#cats-hidden {
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
-    -ms-transition: opacity 0.4s ease-in;
-    -moz-transition: opacity 0.4s ease-in;
-    -webkit-transition: opacity 0.4s ease-in;
-}
-
 #prod li:hover {
-    background-color: darkred;
+    background-color: rgba(100,100,100, .6);
     color: ghostwhite;
     text-decoration: none;
     border-radius: 1px;
     outline: none;
-    border-color: darkred;;
-    box-shadow: 0 0 2px darkred;;
+    border-color: rgba(100,100,100, .6);
+    box-shadow: 0 0 2px rgba(100,100,100, .6);
     transition-duration: 0.3s;
 }
 
@@ -507,13 +500,13 @@ html, body {
 
 .active-prodCat {
     margin: 15px 0 0 0;
-    background-color: #003399;
+    background-color: rgba(100,100,100, .3);
     color: ghostwhite !important;
     text-decoration: none;
     border-radius: 1px;
     outline: none;
-    border-color: #003399;
-    box-shadow: 0 0 2px #003399;
+    border-color: rgba(100,100,100, .3);
+    box-shadow: 0 0 2px rgba(100,100,100, .3);
 }
 
 .prodCat {
@@ -521,13 +514,13 @@ html, body {
 }
 
 .active-prod {
-    background-color: darkred;
+    background-color: rgba(100,100,100, .6);
     color: ghostwhite !important;
     text-decoration: none;
     border-radius: 1px;
     outline: none;
-    border-color: darkred;
-    box-shadow: 0 0 2px darkred;
+    border-color: rgba(100,100,100, .6);
+    box-shadow: 0 0 2px rgba(100,100,100, .6);
 }
 [contenteditable="true"]:focus{
     border:none;
@@ -665,7 +658,7 @@ html, body {
     position: relative;
     display: block;
     border: none;
-    width: 1190px;
+    width: 1375px;
     height: 30px;
     margin: 0;
 }
@@ -715,7 +708,7 @@ html, body {
     width: 500px;
     height: 45px;
     z-index: 5;
-    top: 475px;
+    top: 450px;
     left: 500px;
     position: relative;
     border: solid transparent;
@@ -731,7 +724,7 @@ html, body {
     width: 500px;
     height: 45px;
     z-index: 4;
-    top: 475px;
+    top: 450px;
     left: 500px;
     position: relative;
     border: solid transparent;
@@ -861,6 +854,7 @@ html, body {
 }
 
 .save-selector {
+    border-radius: 3px;
     z-index: 4;
     position: relative;
     top: 175px;
@@ -873,42 +867,42 @@ html, body {
     box-shadow: 0 0 10px #9ecaed;  
 }
 
-.save-option-save-btn-disabled {
-    border-radius: 2px;
+#sv-op-sv-btn-disabled {
     z-index: 4;
     position: relative;
-    top: 200px;
-    left: 170px;
-    width: 245px;
-    height: 25px;
+    top: 250px;
+    left: -150px;
     transition-duration: 0.4s;
-    outline: none; 
-    background-color:midnightblue;
+    color:dimgray;
+    font-size: 2.2em;
 }
 
-.save-option-save-btn-enabled {
-    border-radius: 2px;
+#sv-op-sv-btn-enabled {
     cursor: pointer;
     z-index: 4;
     position: relative;
-    top: 200px;
-    left: 170px;
-    width: 245px;
-    height: 25px;
+    top: 250px;
+    left: -150px;
     transition-duration: 0.4s;
-    outline: none; 
-    background-color:green;
+    color:green;
+    font-size: 2.2em;
 }
 
-.save-option-exit-btn {
-    border-radius: 2px;
+#sv-op-ex-btn {
+    cursor: pointer;
     z-index: 4;
     position: relative;
-    top: 225px;
-    left: 170px;
-    width: 245px;
-    height: 25px;
+    top: 5px;
+    left: 100px;
     transition-duration: 0.4s;
-    outline: none; 
-    background-color:darkred;
+    color:darkred;
+    font-size: 2em;
+}
+
+.side-bar-trigger {
+    height: 400px;
+    width: 5px;
+    position: absolute;
+    z-index: 6;
+    left: -4px;
 }

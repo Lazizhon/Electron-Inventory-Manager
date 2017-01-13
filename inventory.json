@@ -527,7 +527,7 @@
               "inStock": true,
               "notes": "",
               "url": "http://dicksautoparts.com/i-23894144-99-06-chevy-silverado-gmc-sierra-std-crew-ext-drivers-side-rear-lower-6-short-bed-section.html",
-              "description": "99-06 Chevy Silverado/GMC Sierra Standard/Crew/Extended ' Door Driver's Side Rear Lower 6' Short Bed Section"
+              "description": "99-06 Chevy Silverado/GMC Sierra Standard/Crew/Extended ' Door Driver's Side Rear Lower 6' Short Bed Sections"
             },
             {
               "stockID": "0856 136",
@@ -3536,7 +3536,8 @@
               "make": "",
               "inStock": true,
               "url": "",
-              "notes": ""
+              "notes": "",
+              "description": "01-03 Ford F-150 Super Crew Bushwacker Extend-A-Fender Flares(painted green)(Discontinued)"
             },
             {
               "qty": "1",

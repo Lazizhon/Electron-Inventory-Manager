@@ -28,6 +28,7 @@ var eId;
 var disabled = false;
 
 let searchBar = document.getElementById("search-bar");
+var sidebar = document.getElementById('sidebar');
 var prevText;
 let targRow;
 let trPrevClass;
@@ -39,6 +40,15 @@ if (!loaded) {
     populateSide();
     populateNav();
   };
+  document.getElementById('side-trigger').onmouseover = function () {
+    if(sidebar.className == "sidebar-closed") {
+      sidebar.className = "sidebar-open";
+    }
+    else {
+      sidebar.className = "sidebar-closed";
+    }
+  };
+
   searchBar.addEventListener("focus", function() {
   if(searchBar.value)
     this.setAttribute("data-initial-text", this.value);
@@ -68,14 +78,7 @@ function clearWarn(elem) {
 }
 
 document.getElementById("settings-btn").addEventListener("click", function(e) {
-  var shown = document.getElementById("cats");
-  if (shown) {
-    shown.id = "cats-hidden";
-  }
-  else {
-    document.getElementById("cats-hidden").id = "cats";
-  }
-  document.getElementById('sidebar').id = "sidebar-closed";
+
 });
 
 document.getElementById("close-search-btn").addEventListener("click", function(e) {
@@ -802,7 +805,7 @@ function createPrintMenu () {
   exitBtn.id  = "print-menu-exit";
   exitBtn.className = 'fa fa-times';
   exitBtn.onclick = function() {
-    removePrintMenu(printMenu);
+    removeMenu(printMenu);
   };
 
   iconContainer2.appendChild(iconText2);
@@ -848,12 +851,12 @@ function saveOptionMenu (parentMenu) {
     guideSelector.appendChild(guideOp);
   }
 
-  var svBtn = document.createElement('div');
-  svBtn.id = "sv-op-sv-btn";
-  svBtn.className = "save-option-save-btn-disabled";
+  var svBtn = document.createElement('i');
+  svBtn.id = "sv-op-sv-btn-disabled";
+  svBtn.className = "fa fa-floppy-o";
 
   svBtn.onclick = function () {
-    if (this.className === "save-option-save-btn-enabled") {
+    if (this.id === "sv-op-sv-btn-enabled") {
       ipc.send('save-dialog');
     }
     else {
@@ -861,19 +864,28 @@ function saveOptionMenu (parentMenu) {
     }
   };
 
-  var exBtn = document.createElement('div');
+  var exBtn = document.createElement('i');
   exBtn.id = "sv-op-ex-btn";
-  exBtn.className = "save-option-exit-btn";
+  exBtn.className = "fa fa-times";
+
+  exBtn.onclick = function () {
+    removeMenu (exBtn.parentNode);
+  }
 
   guideSelector.onchange = function () {
-    var saveBtn = document.getElementById('sv-op-sv-btn');
+    if(document.getElementById('sv-op-sv-btn-enabled')) {
+      var saveBtn = document.getElementById('sv-op-sv-btn-enabled');
+    }
+    else {
+      var saveBtn = document.getElementById('sv-op-sv-btn-disabled')
+    }
     if (guideSelector.options[guideSelector.selectedIndex].value.length > 0) {
-      if (saveBtn.className === "save-option-save-btn-disabled") {
-        saveBtn.className = "save-option-save-btn-enabled";
+      if (saveBtn.id === "sv-op-sv-btn-disabled") {
+        saveBtn.id = "sv-op-sv-btn-enabled";
       }
     }
     else {
-      saveBtn.className = "save-option-save-btn-disabled"; 
+      saveBtn.id = "sv-op-sv-btn-disabled"; 
     }
   };
 
@@ -950,7 +962,7 @@ ipc.on('saved-file', function (event, path) {
   saveToXLXS (guideSelector.options[guideSelector.selectedIndex].value);
 });
 
-function removePrintMenu (menu) {
+function removeMenu (menu) {
   menuChildren = menu.childNodes;
   for (var i = 0; i < menuChildren.length; i++) {
     menuChildren[i].parentNode.removeChild(menuChildren[i]);
