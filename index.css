@@ -714,7 +714,7 @@ html, body {
     border-radius: 5px;
     width: 500px;
     height: 45px;
-    z-index: 1;
+    z-index: 5;
     top: 475px;
     left: 500px;
     position: relative;
@@ -814,6 +814,22 @@ html, body {
 #pdf-icon:hover {
     color: red;
     transition: 0.5s;
+
+}
+
+#print-menu-exit {
+    font-size: 3em;
+    color: darkred;
+    z-index: 2;
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+    top: -50px;
+    left: 775px;
+}
+
+#print-menu-exit:hover {
+    color: red;
 }
 
 .xport-icon-container {
@@ -826,4 +842,73 @@ html, body {
 
 .icon-text {
     font-size: 1.5em;
+}
+
+.save-option-menu {
+    width: 575px;
+    height: 400px;
+    position: relative;
+    top: 30px;
+    left: 380px;
+    z-index: 3;
+    background-color: ghostwhite;
+    border: solid;
+    border-width: .2px;
+    transition: all 0.5s ease;
+    transition-duration: 0.4s;
+    outline: none;
+    box-shadow: 0 0 10px #9ecaed;   
+}
+
+.save-selector {
+    z-index: 4;
+    position: relative;
+    top: 175px;
+    width: 245px;
+    transition-duration: 0.4s;
+    outline: none; 
+}
+
+.save-selector:hover {
+    box-shadow: 0 0 10px #9ecaed;  
+}
+
+.save-option-save-btn-disabled {
+    border-radius: 2px;
+    z-index: 4;
+    position: relative;
+    top: 200px;
+    left: 170px;
+    width: 245px;
+    height: 25px;
+    transition-duration: 0.4s;
+    outline: none; 
+    background-color:midnightblue;
+}
+
+.save-option-save-btn-enabled {
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 4;
+    position: relative;
+    top: 200px;
+    left: 170px;
+    width: 245px;
+    height: 25px;
+    transition-duration: 0.4s;
+    outline: none; 
+    background-color:green;
+}
+
+.save-option-exit-btn {
+    border-radius: 2px;
+    z-index: 4;
+    position: relative;
+    top: 225px;
+    left: 170px;
+    width: 245px;
+    height: 25px;
+    transition-duration: 0.4s;
+    outline: none; 
+    background-color:darkred;
 }

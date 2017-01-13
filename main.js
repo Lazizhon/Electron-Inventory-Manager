@@ -7,6 +7,21 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
+const ipc = require('electron').ipcMain
+const dialog = require('electron').dialog
+
+ipc.on('save-dialog', function (event) {
+  const options = {
+    title: 'Save an Image',
+    filters: [
+      { name: 'Workbook', extensions: ['xlsx'] }
+    ]
+  }
+  dialog.showSaveDialog(options, function (filename) {
+    event.sender.send('saved-file', filename)
+  })
+})
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow

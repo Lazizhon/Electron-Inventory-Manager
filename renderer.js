@@ -14,7 +14,12 @@ var docChanged = false;
 var eleChanged = false;
 let editing = false;
 let print = document.getElementById('print-btn');
+var pathname;
 
+const ipc = require('electron').ipcRenderer
+
+
+var guideList = [];
 var currCat;
 var times = 0;
 var numLines;
@@ -166,6 +171,7 @@ function populateSide() {
   var cat  = document.getElementById('cat');
   for (var i = 0; i < list.length; i++) {
     var listGuide = list[i];
+    guideList.push(list[i].title);
     var listCat = listGuide.category;
     var li = document.createElement('li');
     var div = document.createElement('div');
@@ -772,9 +778,11 @@ function createPrintMenu () {
   var xclIcon = document.createElement('i');
   xclIcon.className = 'fa fa-file-excel-o';
   xclIcon.id = 'xcelIcon';
-  xclIcon.onclick = function () {
-    saveToXLXS();
-  }
+
+  xclIcon.addEventListener('click', function (event) {
+    saveOptionMenu(printMenu);
+});
+
   iconContainer.appendChild(iconText);
   iconContainer.appendChild(xclIcon);
 
@@ -789,23 +797,92 @@ function createPrintMenu () {
   PDFIcon.onclick = function () {
 
   }
+
+  var exitBtn = document.createElement('i');
+  exitBtn.id  = "print-menu-exit";
+  exitBtn.className = 'fa fa-times';
+  exitBtn.onclick = function() {
+    removePrintMenu(printMenu);
+  };
+
   iconContainer2.appendChild(iconText2);
   iconContainer2.appendChild(PDFIcon);
 
   printMenu.appendChild(iconContainer);
   printMenu.appendChild(iconContainer2);
+  printMenu.appendChild(exitBtn);
   body.appendChild(printMenu);
 }
 
-function saveToXLXS () {
+function saveToXLXS (guideName) {
   var wb, guide = jobj.Guide;
+  alert (guideName);
   for (var i = 0; i < guide.length; i++) {
     var wb;
-    wb = createWorkbookFromJSON (guide[i]);
-    XLSX.writeFile(wb, guide[i].title + '.xlsx');
+    if (guide[i].title === guideName) {
+      wb = createWorkbookFromJSON (guide[i]);
+      XLSX.writeFile(wb, pathname + '.xlsx');
+      break;
+    }
   }
-  successAlert ("Successfully created " + guide.length + " guides");
+  successAlert ("Successfully created guide");
 };
+
+function saveOptionMenu (parentMenu) {
+  var opMenu = document.createElement('div');
+  opMenu.id = "sv-op-mnu";
+  opMenu.className = "save-option-menu";
+
+  var guideSelector = document.createElement('select');
+  guideSelector.id = "sv-op-slt";
+  guideSelector.className = "save-selector";
+
+  var guideOp = document.createElement('option');
+  guideSelector.appendChild(guideOp);
+  guideSelector.value = null;
+
+  for (var i = 0; i < guideList.length; i++) {
+    guideOp = document.createElement('option');
+    guideOp.value = guideList[i];
+    guideOp.innerHTML = guideList[i];
+    guideSelector.appendChild(guideOp);
+  }
+
+  var svBtn = document.createElement('div');
+  svBtn.id = "sv-op-sv-btn";
+  svBtn.className = "save-option-save-btn-disabled";
+
+  svBtn.onclick = function () {
+    if (this.className === "save-option-save-btn-enabled") {
+      ipc.send('save-dialog');
+    }
+    else {
+      warnAlert ("Select guide above to save");
+    }
+  };
+
+  var exBtn = document.createElement('div');
+  exBtn.id = "sv-op-ex-btn";
+  exBtn.className = "save-option-exit-btn";
+
+  guideSelector.onchange = function () {
+    var saveBtn = document.getElementById('sv-op-sv-btn');
+    if (guideSelector.options[guideSelector.selectedIndex].value.length > 0) {
+      if (saveBtn.className === "save-option-save-btn-disabled") {
+        saveBtn.className = "save-option-save-btn-enabled";
+      }
+    }
+    else {
+      saveBtn.className = "save-option-save-btn-disabled"; 
+    }
+  };
+
+  opMenu.appendChild(guideSelector);
+  opMenu.appendChild(svBtn);
+  opMenu.appendChild(exBtn);
+
+  parentMenu.appendChild(opMenu);
+}
 
 function createWorkbookFromJSON (guide) {
   var wb = {}
@@ -861,3 +938,24 @@ function createWorkbookFromJSON (guide) {
   function createPDF () {
     
   }
+
+ipc.on('saved-file', function (event, path) {
+  var guideSelector = document.getElementById('sv-op-slt');
+  if (!path) {
+    pathname = './' + guideSelector.options[guideSelector.selectedIndex].value;
+  }
+  else {
+    pathname = path;
+  }
+  saveToXLXS (guideSelector.options[guideSelector.selectedIndex].value);
+});
+
+function removePrintMenu (menu) {
+  menuChildren = menu.childNodes;
+  for (var i = 0; i < menuChildren.length; i++) {
+    menuChildren[i].parentNode.removeChild(menuChildren[i]);
+  }
+  menu.parentNode.removeChild(menu);
+  currCat = -1;
+  fillProduct(eId);
+}
