@@ -1,3 +1,3 @@
 # Electron-Inventory-Manager
 
-Custom inventory management software written with HTML, CSS and pure Javascript. Inventory is displayed in rows, similar to a spreadsheet, or in an individual "form" edit view used to access more attributes (notes, stock, URL, etc...). All data is stored in a JSON file categorized by "Guides" (Representing sections of inventory, such as clearance), "Categories" (Product categories) and "Products" (along with corresponding product attributes) and is displayed dynamically. DOM element creation, manipulation, animation etc... is achieved using pure Javascript (no JQuery or similar Javascript libraries). Similarly, elements are styled using pure, custom CSS classes (no third-party frameworks, like Bootstrap, are used). Finally, the system is built on Electron, allowing for use as a traditional desktop application.
+Custom inventory management software written with HTML, CSS and pure Javascript.
