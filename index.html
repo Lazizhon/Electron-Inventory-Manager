@@ -1,53 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <div >
-  <head>
-    <meta charset="UTF-8">
-    <title>Inventory Management System v.01</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Carrois+Gothic" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<div>
 
-  </head>
-  <body id="mainContainer">
-    <div id="nav">
-      <ul>
-        <li><div class="open-btn-main" id="open-btn"></div></li>
-        <li><div class="save-btn-main" id="save-btn"></div></li>
-        <li><div class="undo-btn-primary" id="undo-btn"></div></li>
-        <li><div class="add-btn-primary" id="add-btn"></div></li>
-        <li><div class="print-btn-primary" id="print-btn"></div></li>
-        <li><div class="settings-btn-primary" id="settings-btn"></div></li>
-        <li><select class="slt-mnu" id="slt-make"></select></li>
-        <li><select class="slt-mnu" id="slt-type"></select></li>
-        <li><input id="search-bar" class="search-bar-primary" type="text" name="search" placeholder="search..."></li>
-        <li><div id="close-search-btn" class="close-search-btn-primary"></div></li>
-        <li><div id="search-btn" class="search-btn-primary"></div></li>
-      </ul>
-    </div>
-    <div id="side-trigger" class="side-bar-trigger"></div>
-    <div id="sidebar" class="sidebar-closed">
-      <ul id="cat">
-      </ul>
-    </div>
-    <div id="cats">
-      <div class="col">StockID</div>
-      <div class="col">Description</div>
-      <div class="prc">Price</div>
-      <div class="col">Qty</div>
-    </div>
-    <div id="mainWin">
-      <div id ="anchor"></div>
-    </div>
-  </body>
-  </div>
-  <script type='text/javascript' > 
-    var stock; 
-  </script>
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inventory Management System v.01</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Carrois+Gothic" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    </head>
+
+    <body id="mainContainer">
+        <div id="nav">
+            <ul>
+                <li>
+                    <div class="open-btn-main" id="open-btn"></div>
+                </li>
+                <li>
+                    <div class="save-btn-main" id="save-btn"></div>
+                </li>
+                <li>
+                    <div class="undo-btn-primary" id="undo-btn"></div>
+                </li>
+                <li>
+                    <div class="add-btn-primary" id="add-btn"></div>
+                </li>
+                <li>
+                    <div class="print-btn-primary" id="print-btn"></div>
+                </li>
+                <li>
+                    <div class="settings-btn-primary" id="settings-btn"></div>
+                </li>
+                <li><select class="slt-mnu" id="slt-make"></select></li>
+                <li><select class="slt-mnu" id="slt-type"></select></li>
+                <li><input id="search-bar" class="search-bar-primary" type="text" name="search" placeholder="search..."></li>
+                <li>
+                    <div id="close-search-btn" class="close-search-btn-primary"></div>
+                </li>
+                <li>
+                    <div id="search-btn" class="search-btn-primary"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="side-trigger" class="side-bar-trigger"></div>
+        <div id="sidebar" class="sidebar-closed">
+            <ul id="cat">
+            </ul>
+        </div>
+        <div id="cats">
+            <div class="col">StockID</div>
+            <div class="col">Description</div>
+            <div class="prc">Price</div>
+            <div class="col">Qty</div>
+        </div>
+        <div id="mainWin">
+            <div id="anchor"></div>
+        </div>
+    </body>
+</div>
+<script type='text/javascript' src='./src/interface.js'>
+</script>
+<script type='text/javascript' src='./src/sidebar.js'>
+</script>
+<script type='text/javascript' src='./src/search.js'>
+</script>
+<script type='text/javascript' src='./src/form.js'>
+</script>
+
 </html>

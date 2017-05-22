@@ -1,8 +1,8 @@
-html, body {
+html,
+body {
     color: black;
     overflow: hidden;
 }
-
 
 .btns {
     margin: 0 0 0 -2px;
@@ -14,7 +14,7 @@ html, body {
     height: 45px;
     width: 1375px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: linear-gradient(#003366, #003366);
+    background: rgba(25, 25, 25, .9);
 }
 
 #nav ul {
@@ -187,7 +187,7 @@ html, body {
 }
 
 .search-bar-primary:focus {
-    width:200px;
+    width: 200px;
     transition: width 0.4s ease-in-out;
     border-radius: 7px;
     outline: none;
@@ -206,10 +206,10 @@ html, body {
     border-radius: 4px;
     transition: border-color 0.7s ease;
     font-family: 'Carrois Gothic', sans-serif;
-    width:200px;
+    width: 200px;
     border-radius: 7px;
     outline: none;
-    border-color:orange;
+    border-color: orange;
     box-shadow: 0 0 10px orange;
 }
 
@@ -241,12 +241,11 @@ html, body {
     border-width: .5px important!;
 }
 
-
 .textBox-small:focus {
     border-radius: 7px;
     outline: none;
     border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;   
+    box-shadow: 0 0 10px #9ecaed;
     color: black;
 }
 
@@ -270,15 +269,15 @@ html, body {
     border-radius: 7px;
     outline: none;
     border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;  
-    color: black; 
+    box-shadow: 0 0 10px #9ecaed;
+    color: black;
 }
 
 .slt-mnu {
     width: 75px;
     outline: none;
     border-color: darkblue;
-    box-shadow: 0 0 2px darkblue;   
+    box-shadow: 0 0 2px darkblue;
 }
 
 .sidebar-open {
@@ -291,9 +290,10 @@ html, body {
     border-width: .5px;
     border-style: solid;
     font-size: 14px;
-    border-color: midnightblue;
+    border-color: rgba(25, 25, 25, .9);
+    ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: linear-gradient(#003377, #003377);
+    background: rgba(25, 25, 25, .9);
     transition-duration: 0.5s;
     z-index: 3;
 }
@@ -310,17 +310,17 @@ html, body {
     border-style: solid;
     transition-duration: 0.5s;
     font-size: 14px;
-    border-color: midnightblue;
+    border-color: rgba(25, 25, 25, .9);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: linear-gradient(#003377, #003377);
+    background: rgba(25, 25, 25, .9);
 }
 
 .guide {
-  margin: 0 115px 0 -150px;
-  display: inline-block;
-  width: 30px;
-  height: auto;
-  font-family: 'Archivo Black', sans-serif;
+    margin: 0 115px 0 -150px;
+    display: inline-block;
+    width: 30px;
+    height: auto;
+    font-family: 'Archivo Black', sans-serif;
 }
 
 .underline {
@@ -357,25 +357,36 @@ html, body {
 }
 
 .invBlocklt {
-  transition-duration: 0.5s;
-  position: relative;
-  display: block;
-  border: none;
-  width: 1375px;
-  height: 30px;
-  margin: 0;
-  background: #eeeaef;
+    transition-duration: 0.5s;
+    position: relative;
+    display: block;
+    border: none;
+    width: 1375px;
+    height: 30px;
+    margin: 0;
+    background: #eeeaef;
+}
+
+.invBlockdr {
+    position: relative;
+    display: block;
+    border: none;
+    width: 1375px;
+    height: 30px;
+    margin: 0;
+    transition-duration: 0.4s;
 }
 
 .invBlock-oos {
-  transition-duration: 0.5s;
-  position: relative;
-  display: block;
-  border: none;
-  width: 1375px;
-  height: 30px;
-  margin: 0;
-  background-color: rgba(250,250,0, .8); /* Black w/opacity */
+    transition-duration: 0.5s;
+    position: relative;
+    display: block;
+    border: none;
+    width: 1375px;
+    height: 30px;
+    margin: 0;
+    background-color: rgba(250, 250, 0, .8);
+    /* Black w/opacity */
 }
 
 .invBlock-exp {
@@ -395,66 +406,51 @@ html, body {
     background: #eeeaef;
 }
 
-.invBlockdr {
-  position: relative;
-  display: block;
-  border: none;
-  width: 1375px;
-  height: 30px;
-  margin: 0;
-  transition-duration: 0.4s;
-}
-
 .col {
-  margin: -50px 25px 0 20px;
-  display: inline-block;
-  width: 75px;
-  height: auto;
-  font-family: 'Archivo Black', sans-serif;
+    margin: -50px 25px 0 20px;
+    display: inline-block;
+    width: 75px;
+    height: auto;
+    font-family: 'Archivo Black', sans-serif;
 }
 
 .prc {
-  margin: 0 25px 0 610px;
-  display: inline-block;
-  width: 30px;
-  height: auto;
-  font-family: 'Archivo Black', sans-serif;
+    margin: 0 25px 0 610px;
+    display: inline-block;
+    width: 30px;
+    height: auto;
+    font-family: 'Archivo Black', sans-serif;
 }
 
 ::-webkit-scrollbar {
     width: .5px;
 }
 
-
 .ops {
-  float: right;
+    float: right;
 }
 
-.max-btn {
+.max-btn {}
 
-}
-
-.min-btn {
-
-}
+.min-btn {}
 
 .close-btn {
-  -webkit-border-radius: 0 !important;
-     -moz-border-radius: 0 !important;
-          border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
-#prod li{
-  cursor: pointer;
-  text-decoration: none;
-
+#prod li {
+    cursor: pointer;
+    text-decoration: none;
 }
 
 #cats {
     margin: -10px 0 0 0;
     padding: 5px 0 0 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: linear-gradient(#003399, #003399);
+    background: rgba(50, 25, 50, .8);
+    ;
     opacity: 1;
     transition: opacity 0.4s transition;
     height: 30px;
@@ -462,51 +458,37 @@ html, body {
 }
 
 #prod li:hover {
-    background-color: rgba(100,100,100, .6);
     color: ghostwhite;
     text-decoration: none;
     border-radius: 1px;
     outline: none;
-    border-color: rgba(100,100,100, .6);
-    box-shadow: 0 0 2px rgba(100,100,100, .6);
-    transition-duration: 0.3s;
-}
-
-#prod ul:hover {
-    background-color: darkred;
-    color: ghostwhite;
-    text-decoration: none;
-    border-radius: 1px;
-    outline: none;
-    border-color: darkred;;
-    box-shadow: 0 0 2px darkred;;
     transition-duration: 0.3s;
 }
 
 .stop-scrolling {
-  height: 100%;
-  overflow: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 
 #prod a {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .normal {
-  cursor: pointer;
-  text-decoration: none;
-  transition-duration: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 0.3s;
 }
 
 .active-prodCat {
     margin: 15px 0 0 0;
-    background-color: rgba(100,100,100, .3);
-    color: ghostwhite !important;
+    color: lightgray !important;
     text-decoration: none;
     border-radius: 1px;
     outline: none;
-    border-color: rgba(100,100,100, .3);
-    box-shadow: 0 0 2px rgba(100,100,100, .3);
+    /*border-color: rgba(100, 100, 100, .3);
+    background-color: rgba(100, 100, 100, .3);
+    box-shadow: 0 0 2px rgba(100, 100, 100, .3);*/
 }
 
 .prodCat {
@@ -514,62 +496,70 @@ html, body {
 }
 
 .active-prod {
-    background-color: rgba(100,100,100, .6);
     color: ghostwhite !important;
     text-decoration: none;
     border-radius: 1px;
     outline: none;
-    border-color: rgba(100,100,100, .6);
-    box-shadow: 0 0 2px rgba(100,100,100, .6);
+    /*border-color: rgba(100, 100, 100, .6);
+    background-color: rgba(100, 100, 100, .6);
+    box-shadow: 0 0 2px rgba(100, 100, 100, .6);*/
 }
-[contenteditable="true"]:focus{
-    border:none;
+
+.active-prod:before {
+    font-family: FontAwesome;
+    content: "\f1db";
+    font-size: 8px !important;
+    color: slategrey;
+}
+
+[contenteditable="true"]:focus {
+    border: none;
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 15px #9ecaed;
 }
 
 .stock {
-  display: inline-block;
-  margin: 5px 25px 0 20px;
-  width: 75px;
-  box-sizing: border-box;
-  white-space: nowrap;
-  overflow: hidden;
-  }
+    display: inline-block;
+    margin: 5px 25px 0 20px;
+    width: 75px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
-  .stock:focus {
-  display: inline-block;
-  margin: 5px 25px 0 20px;
-  width: 75px;
-  box-sizing: border-box;
-  white-space: nowrap;
-  overflow: hidden;
-  }
+.stock:focus {
+    display: inline-block;
+    margin: 5px 25px 0 20px;
+    width: 75px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
-  .desc {
-  display: inline-block;
-  margin: 5px 45px 0 10px;
-  box-sizing: border-box;
-  width: 625px;
-  white-space: nowrap;
-  overflow: hidden;
-  }
+.desc {
+    display: inline-block;
+    margin: 5px 45px 0 10px;
+    box-sizing: border-box;
+    width: 625px;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 .price {
-  display: inline-block;
-  margin: 5px -20px 0 50px;
-  width: 65px;
-  box-sizing: border-box;
-  ghostwhite-space: nowrap;
-  overflow: hidden;
+    display: inline-block;
+    margin: 5px -20px 0 50px;
+    width: 65px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .qty {
-  display: inline-block;
-  margin: 5px -45px 0 50px;
-  width: 30px;
-  box-sizing: border-box;
+    display: inline-block;
+    margin: 5px -45px 0 50px;
+    width: 30px;
+    box-sizing: border-box;
 }
 
 .edit-btn-primary {
@@ -597,7 +587,7 @@ html, body {
     background: transparent;
     transition-duration: 0.4s;
     color: green;
-    outline: none;    
+    outline: none;
 }
 
 .del-btn-primary {
@@ -652,7 +642,7 @@ html, body {
 }
 
 .highlight-row {
-    background-color:darkblue;
+    background-color: darkblue;
     color: ghostwhite;
     transition-duration: 0.9s;
     position: relative;
@@ -712,7 +702,8 @@ html, body {
     left: 500px;
     position: relative;
     border: solid transparent;
-    background-color: rgba(150,0,0, .8); /* Black w/opacity */
+    background-color: rgba(150, 0, 0, .8);
+    /* Black w/opacity */
     transition: width 0.9s ease;
     transition-duration: 0.9s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -723,20 +714,21 @@ html, body {
     border-radius: 5px;
     width: 500px;
     height: 45px;
-    z-index: 4;
-    top: 450px;
-    left: 500px;
-    position: relative;
+    z-index: 100;
+    top: 600px;
+    left: 225px;
+    position: absolute;
     border: solid transparent;
-    background-color: rgba(0,150,0, .8); /* Black w/opacity */
+    background-color: rgba(0, 150, 0, .8);
+    /* Black w/opacity */
     transition: all 0.5s ease;
     transition-duration: 0.4s;
     outline: none;
-    box-shadow: 0 0 10px #9ecaed;   
+    box-shadow: 0 0 10px #9ecaed;
 }
 
 .alert-overlay-text {
-   font-weight: bold;
+    font-weight: bold;
     width: auto;
     height: auto;
     z-index: 2;
@@ -758,7 +750,7 @@ html, body {
     height: 15px;
     outline: none;
     border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;   
+    box-shadow: 0 0 10px #9ecaed;
     position: relative;
     top: 5px;
     left: 40px;
@@ -772,15 +764,17 @@ html, body {
     position: relative;
     top: -75px;
     border: solid transparent;
-    background-color: rgba(251,251,251, .99); /* Black w/opacity */
+    background-color: rgba(251, 251, 251, .99);
+    /* Black w/opacity */
     transition: all 0.5s ease;
     transition-duration: 0.4s;
     outline: none;
-    box-shadow: 0 0 10px #9ecaed;   
+    box-shadow: 0 0 10px #9ecaed;
 }
 
 #xcelIcon {
-    font-size: 6em;;
+    font-size: 6em;
+    ;
     z-index: 2;
     cursor: pointer;
     color: green;
@@ -795,7 +789,8 @@ html, body {
 }
 
 #pdf-icon {
-    font-size: 6em;;
+    font-size: 6em;
+    ;
     z-index: 2;
     cursor: pointer;
     color: darkred;
@@ -807,7 +802,6 @@ html, body {
 #pdf-icon:hover {
     color: red;
     transition: 0.5s;
-
 }
 
 #print-menu-exit {
@@ -849,7 +843,7 @@ html, body {
     transition: all 0.5s ease;
     transition-duration: 0.4s;
     outline: none;
-    box-shadow: 0 0 10px #9ecaed;   
+    box-shadow: 0 0 10px #9ecaed;
 }
 
 .save-selector {
@@ -860,11 +854,11 @@ html, body {
     left: 175px;
     width: 245px;
     transition-duration: 0.4s;
-    outline: none; 
+    outline: none;
 }
 
 .save-selector:hover {
-    box-shadow: 0 0 10px #9ecaed;  
+    box-shadow: 0 0 10px #9ecaed;
 }
 
 #sv-op-sv-btn-disabled {
@@ -873,7 +867,7 @@ html, body {
     top: 250px;
     left: 0px;
     transition-duration: 0.4s;
-    color:dimgray;
+    color: dimgray;
     font-size: 2.2em;
 }
 
@@ -884,7 +878,7 @@ html, body {
     top: 250px;
     left: -150px;
     transition-duration: 0.4s;
-    color:green;
+    color: green;
     font-size: 2.2em;
 }
 
@@ -895,7 +889,7 @@ html, body {
     top: 5px;
     left: 100px;
     transition-duration: 0.4s;
-    color:darkred;
+    color: darkred;
     font-size: 2em;
 }
 
